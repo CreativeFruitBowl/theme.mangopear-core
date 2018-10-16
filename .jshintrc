@@ -1,0 +1,19 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esversion": 5,
+    "funcscope": true,
+    "undef": true,
+    "globals": {
+        "Backbone": true,
+        "_": true,
+        "jQuery": true
+    },
+    "noarg": true,
+    "nonbsp": true,
+    "undef": true,
+    "unused": true,
+    "supernew": true,
+    "jquery": true
+}
