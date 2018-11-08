@@ -22,9 +22,27 @@
 ?>
 
 
-	<main class="main" id="main">
-		Insert your content here.
-	</main>
+	<main class="o-main" id="main">
+		<div class="o-container">
+			<div class="o-container  o-container--align-left  o-container--optimise-readability">
+				<?php
+			
+					if (have_posts()) : 
+						while (have_posts()) : the_post();
+							the_content();
+
+						endwhile;
+
+					else :
+						echo '<h2>Sorry!</h2>';
+						echo '<p style-"text-align: center;">Looks like there\'s no content to be found here.</p>';
+
+					endif;
+
+				?>
+			</div><!-- /.o-container -->
+		</div><!-- /.o-container -->
+	</main><!-- /.o-panel -->
 
 
 <?php get_footer(); ?>
