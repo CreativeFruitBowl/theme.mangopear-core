@@ -26,6 +26,7 @@
  *
  * [1]  Include MangUI class
  * [2]	Add SVG sprites
+ * [3]	Define various theme variables
  */
 
 
@@ -52,4 +53,17 @@ require_once get_template_directory() . '/includes/class.mangui.php';
  */
 
 define(MANGOPEAR_SPRITE, get_site_url() . '/sprites/mangopear-core.svg');
+
+
+
+
+
+/**
+ * [3]	Define various theme variables
+ *
+ * 		These can be overwritten by child themes to allow for customisations.
+ *
+ * 		@since 1.0.0
  */
+
+define(BROWSER_TAB_COLOUR, '#499E00');
