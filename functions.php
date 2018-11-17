@@ -25,6 +25,7 @@
  * CONTENTS
  *
  * [1]  Include MangUI class
+ * [2]	Add SVG sprites
  */
 
 
@@ -37,5 +38,18 @@
  */
 
 require_once get_template_directory() . '/includes/class.mangui.php';
+
+
+
+
+
+/**
+ * [2]	Add SVG sprites
+ *
+ * 		Set definitions for sprite URLs.
+ *
+ * 		@since 1.0.0
  */
 
+define(MANGOPEAR_SPRITE, get_site_url() . '/sprites/mangopear-core.svg');
+ */
