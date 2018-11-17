@@ -16,9 +16,8 @@
 /**
  * CHANGELOG
  *
- * @version 5.0.0
- *          Init file
- *          Include ManguiThemeSetup class
+ * @version 1.0.0
+ *          Init
  */
  
 
