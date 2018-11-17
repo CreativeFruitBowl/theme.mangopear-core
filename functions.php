@@ -24,12 +24,18 @@
 /**
  * CONTENTS
  *
- * [1]  Include ManguiThemeSetup class
+ * [1]  Include MangUI class
  */
 
 
 /**
  * [1]	Include MangUI class
+ *
+ * 		Set up the MangUI helper class and functions.
+ *
+ * 		@since 1.0.0
  */
 
 require_once get_template_directory() . '/includes/class.mangui.php';
+ */
+
