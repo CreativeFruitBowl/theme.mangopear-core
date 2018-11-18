@@ -18,5 +18,19 @@
 	<?php wp_footer(); ?>
 
 
+
+
+
+	<!-- Web font loading -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: ['PT+Serif:400,400i,700,700i']
+			}
+		});
+	</script>
+
+
 </body>
 </html>
