@@ -28,6 +28,7 @@
  * [1]  Root elements
  * [2]	Paragraphs
  * [3]	Headings
+ * [4]	Lists
  */
 
 
@@ -109,4 +110,35 @@ html {
 			line-height: 1.4;
 			letter-spacing: -0.05rem;
 			@include rempx(font-size, 18px);
+		}
+
+
+
+
+
+		/**
+		 * [4]	Lists
+		 */
+		
+		ul {
+			list-style: disc;
+			@include rempx(margin, 32px 0);
+			@include rempx(padding, 0 0 0 20px);
+
+			li { @include rempx(padding, 0 0 16px 5px); }
+		}
+
+
+		ol {
+			@include rempx(margin, 32px 0);
+			@include rempx(padding, 0 0 0 20px);
+
+			li { @include rempx(padding, 0 0 16px 8px); }
+		}
+
+
+		li {
+			> ul, > ol {
+				@include rempx(margin, 16px 0 0 16px);
+			}
 		}
