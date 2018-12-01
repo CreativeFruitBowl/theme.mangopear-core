@@ -29,6 +29,7 @@
  * [2]	Paragraphs
  * [3]	Headings
  * [4]	Lists
+ * [5]	Blockquotes
  */
 
 
@@ -140,5 +141,41 @@ html {
 		li {
 			> ul, > ol {
 				@include rempx(margin, 16px 0 0 16px);
+			}
+		}
+
+
+
+
+
+		/**
+		 * [5]	Blockquotes
+		 */
+		
+		blockquote {
+			@include rempx(margin, 32px 0);
+
+
+			p {
+				@include rempx(text-indent, -20px);
+
+				&:before,
+				&:last-of-type:after {
+					text-indent: 0;
+					position: relative;
+					display: inline-block;
+					@include rempx(top, 4px);
+					@include rempx(width, 20px);
+					@include rempx(font-size, 24px);
+					@include rempx(line-height, 16px);
+				}
+
+				&:last-of-type:after { text-align: right; }
+			}
+
+
+			cite {
+				display: inline-block;
+				@include rempx(margin, 8px 0 0);
 			}
 		}
