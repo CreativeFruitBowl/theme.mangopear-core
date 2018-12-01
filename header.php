@@ -63,3 +63,15 @@
 
 
 	<body <?php body_class(); ?>>
+		<header class="c-head-navigation">
+			<div class="o-container">
+				<div class="o-grid">
+					<div class="o-grid__item  u-one-half">
+					</div><!-- /.o-grid__item -->
+
+
+					<div class="o-grid__item  u-one-half">
+					</div><!-- /.o-grid__item -->
+				</div><!-- /.o-grid -->
+			</div><!-- /.o-container -->
+		</header>
