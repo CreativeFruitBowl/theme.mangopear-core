@@ -67,10 +67,15 @@
 			<div class="o-container">
 				<div class="o-grid">
 					<div class="o-grid__item  u-one-half">
+						<a href="<?php echo get_site_url(); ?>" class="c-head-navigation__logo">
+							<svg class="c-head-navigation__logo__icon" height="75" width="175" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#mangopear-logo--white"/></svg>
+							<span class="u-invisible">Mangopear creative</span>
+						</a>
 					</div><!-- /.o-grid__item -->
 
 
 					<div class="o-grid__item  u-one-half">
+						<p>Navigation to go here</p>
 					</div><!-- /.o-grid__item -->
 				</div><!-- /.o-grid -->
 			</div><!-- /.o-container -->

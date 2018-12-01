@@ -1,0 +1,66 @@
+/**
+ * [Component] Global header across theme
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ */
+
+
+/**
+ * [1]  Wrapper
+ */
+
+.c-head-navigation {
+	background: #b3d300;
+	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
+	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	@include rempx(padding, 0 .75rem);
+}
+
+
+
+
+
+	/**
+	 * [2]	Logo
+	 */
+	
+	.c-head-navigation__logo {
+		display: inline-block;
+		outline: 3px solid transparent;
+		outline-offset: -3px;
+		@include rempx(padding, .75rem);
+		@include rempx(margin, 0 0 0 -0.75rem);
+		@include mangui-transition(ease-in-out 400ms opacity, ease-in-out 400ms outline-color);
+
+		&:hover, &:active { opacity: .7; }
+		&:focus, &:focus-within { outline-color: $orange; }
+	}
+
+
+		.c-head-navigation__logo__icon {
+			display: inline-block;
+			vertical-align: middle;
+		}
