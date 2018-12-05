@@ -65,7 +65,7 @@
 	<body <?php body_class(); ?>>
 		<header class="c-head-navigation">
 			<div class="o-container">
-				<div class="o-grid">
+				<div class="o-grid  o-grid--middle">
 					<div class="o-grid__item  u-one-half">
 						<a href="<?php echo get_site_url(); ?>" class="c-head-navigation__logo">
 							<svg class="c-head-navigation__logo__icon" height="75" width="175" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#mangopear-logo--white"/></svg>
