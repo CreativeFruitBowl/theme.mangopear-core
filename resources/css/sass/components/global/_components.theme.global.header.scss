@@ -24,6 +24,7 @@
  *
  * [1]  Wrapper
  * [2]	Logo
+ * [3]	Menu button
  */
 
 
@@ -65,4 +66,38 @@
 			outline: none;
 			display: inline-block;
 			vertical-align: middle;
+		}
+
+
+
+
+
+	/**
+	 * [3]	Menu button
+	 */
+	
+	$nav--off-white: #bcd971;
+
+
+	.c-head-navigation__menu {
+		text-align: right;
+	}
+
+
+		.c-head-navigation__menu__launcher {
+			color: #FFF;
+			border-color: $nav--off-white;
+
+
+			&:hover, &:active, &:focus, &:focus-within {
+				border-color: #FFF;
+				background: $nav--off-white;
+			}
+
+
+			.o-button__text {
+				margin-top: 0;
+				text-transform: uppercase;
+				@include rempx(font-size, 14px);
+			}
 		}
