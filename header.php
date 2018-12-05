@@ -75,7 +75,12 @@
 
 
 					<div class="o-grid__item  u-one-half">
-						<p>Navigation to go here</p>
+						<nav class="c-head-navigation__menu">
+							<button class="o-button  o-button--secondary  c-head-navigation__menu__launcher" type="button">
+								<svg class="o-button__icon  o-button__icon--left" height="22" width="22" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#navigation"/></svg>
+								<span class="o-button__text">Menu</span>
+							</button>
+						</nav>
 					</div><!-- /.o-grid__item -->
 				</div><!-- /.o-grid -->
 			</div><!-- /.o-container -->
