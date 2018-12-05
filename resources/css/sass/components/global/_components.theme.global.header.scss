@@ -23,6 +23,7 @@
  * CONTENTS
  *
  * [1]  Wrapper
+ * [2]	Logo
  */
 
 
@@ -55,12 +56,13 @@
 		@include rempx(margin, 0 0 0 -0.75rem);
 		@include mangui-transition(ease-in-out 400ms opacity, ease-in-out 400ms outline-color);
 
-		&:hover, &:active { opacity: .7; }
+		&:hover, &:active { opacity: .7; outline-color: transparent; }
 		&:focus, &:focus-within { outline-color: $orange; }
 	}
 
 
 		.c-head-navigation__logo__icon {
+			outline: none;
 			display: inline-block;
 			vertical-align: middle;
 		}
