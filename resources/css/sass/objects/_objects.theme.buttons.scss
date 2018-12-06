@@ -49,6 +49,7 @@
 	line-height: 1;																					// []
 	background: none;																				// []
 	display: inline-block;																			// []
+	text-decoration: none;																			// []
 
 	outline: 2px solid transparent;																	// []
 	outline-offset: 1px;																			// []
@@ -59,6 +60,7 @@
 
 
 	+ .o-button { @include rempx(margin-left, 9px); }												// []
+	&:hover, &:active { outline-color: transparent; }
 
 
 	&:hover, &:active, &:focus, &:focus-within {													// []
