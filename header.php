@@ -77,6 +77,11 @@
 								<svg class="o-button__icon  o-button__icon--left" height="22" width="22" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#navigation"/></svg>
 								<span class="o-button__text">Menu</span>
 							</button>
+
+
+							<div class="c-head-navigation__menu__wrap">
+								<?php get_template_part('template-partials/main-navigation'); ?>
+							</div><!-- /.c-head-navigation__menu__wrap -->
 						</nav>
 					</div><!-- /.o-grid__item -->
 				</div><!-- /.o-grid -->
