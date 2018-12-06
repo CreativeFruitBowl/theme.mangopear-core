@@ -179,3 +179,16 @@ html {
 				@include rempx(margin, 8px 0 0);
 			}
 		}
+
+
+
+
+
+		/**
+		 * [6]	Links
+		 */
+		
+		a {
+			text-decoration: underline;
+			@include mangui-transition(ease-in-out 400ms color);
+		}
