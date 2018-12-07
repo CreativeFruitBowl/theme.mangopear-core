@@ -113,18 +113,26 @@
 	
 	.c-head-navigation__menu__wrap {
 		left: 50%;
+		width: 100%;
 		background: #FFF;
 		text-align: left;
 		position: absolute;
 		border: 1px solid $grey--light;
 		border-top-width: 0;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		@include rempx(width, 960px);
-		@include rempx(margin, 26px 0 0 -480px);
+		@include rempx(max-width, 960px);
+		@include rempx(margin, 36px 0 0 -480px);
+
+
+		@include mangui-breakpoint(portable) {
+			left: 0;
+			overflow: auto;
+			margin-left: 0;
+		}
 
 
 		.o-nav {
-
+			@include rempx(width, 960px);
 		}
 
 
@@ -134,17 +142,45 @@
 
 
 				.o-nav__item {
-					&--top-level { vertical-align: top; }
+					&--top-level {
+						display: table-cell;
+						vertical-align: top;
+					}
 
 					&--this-site               { width: 30%; }
 					&[data-nav="also-from-us"] { width: 40%; }
 					&[data-nav="mangopear"]    { width: 30%; }
 
 
-					&--this-site {
-						background: #F4F4F4;
+					&--this-site,
+					&[data-nav="also-from-us"] {
 						border-right: 1px solid #DDD;
 						box-shadow: 2px 0 2px rgba(0,0,0,0.05);
+					}
+
+
+					&--this-site {
+					    background: #b3d300;
+					    background: linear-gradient(45deg, #b3d300 15%, #499e00 100%);
+					    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+
+						.o-nav__text--top-level {
+						    color: #FFF;
+						    border-bottom-color: $lime;
+						}
+
+
+						.o-nav__link { color: #FFF; }
+
+
+						.o-nav__list--second-level {
+							.o-nav__link{
+								&:hover, &:active, &:focus, &:focus-within {
+								    background: rgba(255,255,255,.2);
+								    color: #FFF;
+								}
+							}
+						}
 					}
 				}
 
@@ -192,9 +228,14 @@
 								@include mangui-transition(ease-in-out 400ms all);
 
 
-								&:hover {
+								&:hover, &:active, &:focus, &:focus-within {
 									color: $green;
-									background: #E6E6E6;
+									background: #F0F0F0;
+								}
+
+
+								&.o-button {
+									padding: 0.75em 1.5em;
 								}
 							}
 					}
