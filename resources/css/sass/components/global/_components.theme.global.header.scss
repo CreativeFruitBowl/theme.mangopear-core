@@ -118,7 +118,6 @@
 		text-align: left;
 		position: absolute;
 		border: 1px solid $grey--light;
-		border-top-width: 0;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 		@include rempx(max-width, 960px);
 		@include rempx(margin, 36px 0 0 -480px);
