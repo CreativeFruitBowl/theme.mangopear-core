@@ -121,12 +121,20 @@
 		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 		@include rempx(max-width, 960px);
 		@include rempx(margin, 36px 0 0 -480px);
+		@include mangui-transform-origin(100% 0%);
+		@include mangui-transition(ease-in-out 600ms all);
 
 
 		@include mangui-breakpoint(portable) {
 			left: 0;
 			overflow: auto;
 			margin-left: 0;
+		}
+
+
+		&.is-hidden {
+		    opacity: 0;
+		    @include mangui-transform(scale(0));
 		}
 
 
