@@ -1,0 +1,61 @@
+/**
+ * [Component] Common global components across website
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Main
+ * [2]	Page title
+ */
+
+
+/**
+ * [1]  Main
+ */
+
+.o-main {
+	@include rempx(padding, 16px);
+}
+
+
+
+
+
+/**
+ * [2]	Page title
+ */
+
+.c-title {
+
+}
+
+
+	.c-title__title {
+	    text-align: center;
+	    @include rempx(margin, 64px auto 80px);
+	    @include rempx(max-width, 1000px);
+	}
+
+
+	.c-title__image {
+	    width: 100%;
+	    @include rempx(margin, 9px 0 54px);
+	}
