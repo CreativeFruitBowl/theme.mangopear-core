@@ -139,7 +139,7 @@
 
 
 		.o-nav {
-			@include rempx(width, 960px);
+			@include rempx(width, 700px);
 		}
 
 
@@ -154,9 +154,8 @@
 						vertical-align: top;
 					}
 
-					&--this-site               { width: 30%; }
-					&[data-nav="also-from-us"] { width: 40%; }
-					&[data-nav="mangopear"]    { width: 30%; }
+					&--this-site               { width: 40%; }
+					&[data-nav="also-from-us"] { width: 60%; }
 
 
 					&--this-site,

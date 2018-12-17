@@ -66,18 +66,5 @@
 					</li>
 				</ul>
 			</li>
-
-
-			<li class="o-nav__item  o-nav__item--top-level" data-nav="mangopear">
-				<strong class="o-nav__text  o-nav__text--top-level">Latest products:</strong>
-
-				<ul class="o-nav__list  o-nav__list--second-level">
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/item/" class="o-nav__link">Link item</a></li>
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/item/" class="o-nav__link">Link item</a></li>
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/item/" class="o-nav__link">Link item</a></li>
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/item/" class="o-nav__link">Link item</a></li>
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/item/" class="o-nav__link">Link item</a></li>
-				</ul>
-			</li>
 		</ul>
 	</div><!-- /.o-nav -->
