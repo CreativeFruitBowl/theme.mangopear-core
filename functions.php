@@ -82,8 +82,8 @@ define(BROWSER_TAB_COLOUR, '#499E00');
 
 function mangopear_add_image_sizes() {
 	add_image_size('title--s',   500, 325, true);		// [a]
-	add_image_size('title--m',  1000, 250, true);		// [a]
-	add_image_size('title--l',  1500, 375, true);		// [a]
+	add_image_size('title--m',  1000, 375, true);		// [a]
+	add_image_size('title--l',  1500, 400, true);		// [a]
 	add_image_size('title--xl', 2000, 500, true);		// [a]
 }
 
