@@ -122,7 +122,7 @@
 		@include rempx(width, 700px);
 		@include rempx(max-width, 700px);
 		@include rempx(margin, 36px 0 0);
-		@include mangui-transform-origin(100% 0%);
+		@include mangui-transform-origin(50% 0%);
 		@include mangui-transition(ease-in-out 600ms all);
 
 
@@ -134,7 +134,9 @@
 
 		&.is-hidden {
 		    opacity: 0;
-		    @include mangui-transform(scale(0));
+		    visibility: hidden;
+		    pointer-events: none;
+		    @include mangui-transform(translateY(-40px) scale(0.92));
 		}
 
 
