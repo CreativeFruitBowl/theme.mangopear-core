@@ -30,6 +30,8 @@
  * [3]	Headings
  * [4]	Lists
  * [5]	Blockquotes
+ * [6]	Links
+ * [7]	Drop caps
  */
 
 
@@ -198,4 +200,22 @@ html {
 		a {
 			text-decoration: underline;
 			@include mangui-transition(ease-in-out 400ms color);
+		}
+
+
+
+
+
+		/**
+		 * [7]	Drop caps
+		 */
+		
+		p.has-drop-cap.has-drop-cap.has-drop-cap:first-letter {
+			color: #FFF;
+			font-size: 5em;
+			line-height: .8;
+			background: $green;
+			font-weight: bold;
+			@include rempx(margin, -8px 16px 16px 0);
+			@include rempx(padding, 16px 18px 20px 16px);
 		}
