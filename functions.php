@@ -85,6 +85,8 @@ function mangopear_add_image_sizes() {
 	add_image_size('title--m',  1000, 375, true);		// [a]
 	add_image_size('title--l',  1500, 400, true);		// [a]
 	add_image_size('title--xl', 2000, 500, true);		// [a]
+
+	add_image_size('blog-lister', 600, 350, true);		// [a]
 }
 
 
