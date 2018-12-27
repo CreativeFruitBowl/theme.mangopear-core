@@ -35,7 +35,7 @@
 
 				<ul class="o-nav__list  o-nav__list--second-level">
 					<li class="o-nav__item">
-						<a href="https://mangopear.co.uk/item/" class="o-button  o-nav__link">
+						<a href="https://mangopear.co.uk/" class="o-button  o-nav__link">
 							<svg class="o-button__icon  o-button__icon--left" height="44" width="44" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#nav-icon--mangopear-creative"/></svg>
 							<span class="o-button__text"><strong>Mangopear creative</strong> <span class="u-hide">- </span>visit our main website to see what we do.</span>
 						</a>
@@ -43,7 +43,7 @@
 
 
 					<li class="o-nav__item">
-						<a href="https://mangopear.co.uk/item/" class="o-button  o-nav__link">
+						<a href="https://witterings.mangopear.co.uk/" class="o-button  o-nav__link">
 							<svg class="o-button__icon  o-button__icon--left" height="44" width="44" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#nav-icon--witterings"/></svg>
 							<span class="o-button__text"><strong>Witterings from Mangopear</strong> <span class="u-hide">- </span>our witterings about public transport.</span>
 						</a>
@@ -51,7 +51,7 @@
 
 
 					<li class="o-nav__item">
-						<a href="https://mangopear.co.uk/item/" class="o-button  o-nav__link">
+						<a href="https://coding.mangopear.co.uk/" class="o-button  o-nav__link">
 							<svg class="o-button__icon  o-button__icon--left" height="44" width="44" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#nav-icon--coding"/></svg>
 							<span class="o-button__text"><strong>Coding from Mangopear</strong> <span class="u-hide">- </span>our blog about design &amp; web development.</span>
 						</a>
@@ -59,7 +59,7 @@
 
 
 					<li class="o-nav__item">
-						<a href="https://mangopear.co.uk/item/" class="o-button  o-nav__link">
+						<a href="https://account.mangopear.co.uk/" class="o-button  o-nav__link">
 							<svg class="o-button__icon  o-button__icon--left" height="44" width="44" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#nav-icon--account"/></svg>
 							<span class="o-button__text"><strong>Your account</strong> <span class="u-hide">- </span>log in to view invoices &amp; your retainer.</span>
 						</a>
