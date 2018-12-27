@@ -55,6 +55,13 @@
 	}
 
 
+		.c-title__sub-title {
+			color: $green;
+			display: block;
+			text-transform: uppercase;
+		}
+
+
 	.c-title__image {
 	    width: 100%;
 	    @include rempx(margin, 9px 0 54px);
