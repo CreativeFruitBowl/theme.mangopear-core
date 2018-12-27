@@ -25,7 +25,7 @@
 	<main class="o-main" id="main">
 		<header class="c-title">
 			<div class="o-container">
-				<h1 class="c-title__title">Posts</h1>
+				<h1 class="c-title__title">Articles</h1>
 			</div><!-- /.o-container -->
 		</header>
 
