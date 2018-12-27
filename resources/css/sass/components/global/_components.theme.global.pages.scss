@@ -50,7 +50,7 @@
 
 	.c-title__title {
 	    text-align: center;
-	    @include rempx(margin, 64px auto 80px);
+	    @include rempx(margin, 58px auto 80px);
 	    @include rempx(max-width, 1000px);
 	}
 
