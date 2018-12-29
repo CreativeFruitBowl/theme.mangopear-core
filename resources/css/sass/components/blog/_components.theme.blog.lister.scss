@@ -51,6 +51,15 @@
 		}
 
 
+			.c-article__title__link {
+			    outline: 3px solid transparent;
+			    outline-offset: 4px;
+			    @include mangui-transition(ease-in-out 400ms all);
+
+			    &:focus { outline-color: $lime; }
+			}
+
+
 
 
 
