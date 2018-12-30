@@ -51,6 +51,8 @@
 @import "settings/settings.mangui.defaults";
 @import "settings/settings.mangui.setup";
 
+@import "settings/settings.theme.colours";
+
 
 
 
@@ -123,6 +125,8 @@
 @import "base/elements.mangui.images";
 @import "base/elements.mangui.quotes";
 
+@import "base/elements.theme.page";
+
 
 
 
@@ -157,6 +161,8 @@
 @import "objects/objects.mangui.media";
 @import "objects/objects.mangui.carousel";
 
+@import "objects/objects.theme.buttons";
+
 
 
 
@@ -173,6 +179,8 @@
  *   		border-top: 1px solid $colour-ui;
  *   	}
  */
+
+@import "components/global/components.theme.global.header";
 
 
 

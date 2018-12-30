@@ -1,0 +1,249 @@
+/**
+ * [Component] Global header across theme
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ * [2]	Logo
+ * [3]	Menu button
+ * [4]	Mega navigation
+ */
+
+
+/**
+ * [1]  Wrapper
+ */
+
+.c-head-navigation {
+	background: #b3d300;
+	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
+	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	@include rempx(padding, 0 .75rem);
+}
+
+
+
+
+
+	/**
+	 * [2]	Logo
+	 */
+	
+	.c-head-navigation__logo {
+		display: inline-block;
+		outline: 3px solid transparent;
+		outline-offset: -3px;
+		@include rempx(padding, .75rem);
+		@include rempx(margin, 0 0 0 -0.75rem);
+		@include mangui-transition(ease-in-out 400ms opacity, ease-in-out 400ms outline-color);
+
+		&:hover, &:active { opacity: .7; outline-color: transparent; }
+		&:focus, &:focus-within { outline-color: $orange; }
+	}
+
+
+		.c-head-navigation__logo__icon {
+			outline: none;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+
+
+
+
+	/**
+	 * [3]	Menu button
+	 */
+	
+	$nav--off-white: #bcd971;
+
+
+	.c-head-navigation__menu {
+		text-align: right;
+	}
+
+
+		.c-head-navigation__menu__launcher {
+			color: #FFF;
+			border-color: $nav--off-white;
+
+
+			&:hover, &:active, &:focus, &:focus-within {
+				border-color: #FFF;
+				background: $nav--off-white;
+			}
+
+
+			.o-button__text {
+				margin-top: 0;
+				text-transform: uppercase;
+				@include rempx(font-size, 14px);
+			}
+		}
+
+
+
+
+
+	/**
+	 * [4]	Mega navigation
+	 */
+	
+	.c-head-navigation__menu__wrap {
+		left: 50%;
+		width: 100%;
+		background: #FFF;
+		text-align: left;
+		position: absolute;
+		border: 1px solid $grey--light;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+		@include rempx(max-width, 960px);
+		@include rempx(margin, 36px 0 0 -480px);
+		@include mangui-transform-origin(100% 0%);
+		@include mangui-transition(ease-in-out 600ms all);
+
+
+		@include mangui-breakpoint(portable) {
+			left: 0;
+			overflow: auto;
+			margin-left: 0;
+		}
+
+
+		&.is-hidden {
+		    opacity: 0;
+		    @include mangui-transform(scale(0));
+		}
+
+
+		.o-nav {
+			@include rempx(width, 960px);
+		}
+
+
+			.o-nav__list {
+
+			}
+
+
+				.o-nav__item {
+					&--top-level {
+						display: table-cell;
+						vertical-align: top;
+					}
+
+					&--this-site               { width: 30%; }
+					&[data-nav="also-from-us"] { width: 40%; }
+					&[data-nav="mangopear"]    { width: 30%; }
+
+
+					&--this-site,
+					&[data-nav="also-from-us"] {
+						border-right: 1px solid #DDD;
+						box-shadow: 2px 0 2px rgba(0,0,0,0.05);
+					}
+
+
+					&--this-site {
+					    background: #b3d300;
+					    background: linear-gradient(45deg, #b3d300 15%, #499e00 100%);
+					    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+
+						.o-nav__text--top-level {
+						    color: #FFF;
+						    border-bottom-color: $lime;
+						}
+
+
+						.o-nav__link { color: #FFF; }
+
+
+						.o-nav__list--second-level {
+							.o-nav__link{
+								&:hover, &:active, &:focus, &:focus-within {
+								    background: rgba(255,255,255,.2);
+								    color: #FFF;
+								}
+							}
+						}
+					}
+				}
+
+
+					.o-nav__link {
+
+					}
+
+
+						.o-button__text {
+							line-height: 1.3;
+							font-weight: normal;
+							@include rempx(font-size, 14px);
+
+
+							strong {
+								display: block;
+								@include rempx(font-size, 16px);
+							}
+						}
+
+
+					.o-nav__text {
+						&--top-level {
+							display: block;
+							color: $grey--dark;
+							padding-left: 1.5em;
+							padding-right: 1.5em;
+							border-bottom: 2px solid $grey--light;
+							@include rempx(margin, 5px 0 10px);
+						}
+					}
+
+
+					.o-nav__list--second-level {
+						@include rempx(padding-bottom, 10px);
+
+						.o-nav__item { width: 100%; }
+
+
+							.o-nav__link {
+								width: 100%;
+								text-decoration: none;
+								padding: 0.3em 1.5em 0.4em;
+								@include mangui-transition(ease-in-out 400ms all);
+
+
+								&:hover, &:active, &:focus, &:focus-within {
+									color: $green;
+									background: #F0F0F0;
+								}
+
+
+								&.o-button {
+									padding: 0.75em 1.5em;
+								}
+							}
+					}
+	}

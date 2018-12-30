@@ -24,7 +24,7 @@
 
 	<main class="o-main" id="main">
 		<div class="o-container">
-			<div class="o-container  o-container--align-left  o-container--optimise-readability">
+			<div class="o-container  o-container--optimise-readability">
 				<?php
 			
 					if (have_posts()) : 
