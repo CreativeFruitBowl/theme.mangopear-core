@@ -1,0 +1,63 @@
+/**
+ * [Component] Global > Blog lister
+ *
+ * @category	Component
+ * @package		mangopear
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2018 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	1.0.0
+ * @version   	1.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Wrapper
+ * [2]	Header
+ * [3]	Content
+ */
+
+
+/**
+ * [1]	Wrapper
+ */
+
+.c-article {
+	@include rempx(margin, 0 0 32px);
+}
+
+
+
+
+
+	/**
+	 * [2]	Header
+	 */
+	
+	.c-article__header {
+		position: relative;
+	}
+
+
+		.c-article__title {
+		    margin: 0;
+		    width: 85%;
+		    position: relative;
+		    background: #FCFCFC;
+		    @include rempx(margin, -56px 0 -5px);
+		    @include rempx(padding, 24px 16px 0);
+		}
+
+
+
+
+
+	/**
+	 * [3]	Content
+	 */
+	
+	.c-article__content {
+		@include rempx(padding, 0 16px);
+	}

@@ -1,0 +1,323 @@
+/**
+ * [Component] Global > Comments, including form
+ *
+ * @category	Component
+ * @package		mangopear
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2018 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	3.0.0
+ * @version   	3.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Comments > Wrapper
+ * [2]	Comments > Header
+ * [3]	Comments > Form
+ * [4]	Comments > Form > Order
+ * [5]	Comments > Form > Fields
+ * [6]	Comments > No comments
+ * [7]	Comments > List of comments
+ */
+
+
+/**
+ * [1]	Comments > Wrapper
+ */
+
+.o-panel--comments {
+	background: #F3F3F3;
+	border-top: 5px solid #EAEAEA;
+	@include rempx(padding, 32px 18px);
+}
+
+
+
+
+
+	/**
+	 * [2]	Comments > Header
+	 */
+	
+	.c-comments__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+
+		.c-comments__header__title {
+			margin: 0;
+			@include rempx(font-size, 40px);
+			@include rempx(min-width, 300px);
+		}
+
+
+		.c-comments__header__action {
+			@include rempx(min-width, 214px);
+		}
+
+
+
+
+
+	/**
+	 * [3]	Comments > Form
+	 */
+	
+	.c-comments__form-wrap {
+		overflow: hidden;
+		border: 5px solid $grey--lighter;
+		@include rempx(margin, 37px 0 9px);
+		@include rempx(max-height, 2000px);
+		@include mangui-transition(ease-in-out 1.5s max-height);
+
+		@include mangui-breakpoint("max-width: 1000px") {
+			border-left: 0;
+			border-right: 0;
+			@include rempx(margin, 37px -24px 9px);
+		}
+
+
+		&.is-hidden {
+			max-height: 0;
+		}
+
+
+		.comment-respond {
+			@include rempx(padding, 10px 24px 36px);
+			@include mangui-breakpoint("min-width: 1001px") { @include rempx(padding, 10px 50px 40px); }
+		}
+	}
+
+
+		.comment-reply-title {
+			font-weight: 400;
+			@include rempx(font-size, 32px);
+			@include rempx(margin, 17px 0 18px);
+		}
+
+
+
+
+
+		/**
+		 * [4]	Comments > Form > Order
+		 *
+		 * 		We need to change the order of the form fields to 
+		 * 		allow for more logical flow.
+		 */
+
+		.c-comments__form {
+			display: flex;
+			flex-direction:  column;
+
+		
+			.wp-social-login-widget 		{ order: -4; }
+			.comment-notes, .logged-in-as	{ order: -3; }
+			.o-form__field--comment 		{ order: -2; }
+		}
+
+
+
+
+
+		/**
+		 * [5]	Comments > Form > Fields
+		 */
+		
+		.c-comments__form {
+			@include mangui-breakpoint("min-width: 1001px") {
+				.o-form__field--inline { display: flex; }
+					.o-form__field--inline .o-form__input, .acf-comment-fields .acf-input { width: 70%; }
+					.o-form__field--inline .o-form__label, .acf-comment-fields .acf-label { width: 30%; }
+			}
+
+
+			.o-form__input {
+				width: 100%;
+			}
+
+
+			.o-form__label {
+				@include mangui-breakpoint("max-width: 1000px") { padding-bottom: 0; }
+			}
+
+
+			.acf-comment-fields {
+				@include rempx(margin, -9px 0 0);
+
+
+				.field_type-star_rating {
+					display: inline-block;
+				}
+
+
+					.acf-field {
+						margin: 0;
+						align-content: center;
+						@include mangui-breakpoint("min-width: 1001px") { display: flex; }
+
+
+						.acf-input {
+							vertical-align: middle;
+
+
+							.button {
+								position: relative;
+								@include rempx(top, -2px);
+								@include rempx(margin-left, 15px);
+							}
+						}
+
+
+						.acf-label {
+							display: inline-block;
+							@include rempx(margin, 10px 0 0);
+							@include mangui-breakpoint("max-width: 1000px") { width: 100%; }
+						}
+
+
+						.star-rating {
+							margin: 0;
+							clear: both;
+							cursor: default;
+							background: #FFF;
+							display: inline-block;
+							border: 1px solid $grey--lighter;
+							@include rempx(padding, 5px 15px);
+
+
+							li {
+								float: none;
+								display: inline-block;
+								@include rempx(padding, 0 5px);
+								@include rempx(font-size, 22px);
+							}
+						}
+					}
+			}
+
+
+			.o-form__submit {
+				margin-top: 1em;
+				@include mangui-breakpoint("max-width: 1000px") { margin-left: 0; }
+			}
+		}
+
+
+
+
+
+	/**
+	 * [6]	Comments > No comments
+	 */
+	
+	.c-comments__comments--empty {
+		color: $grey--dark;
+		background: $grey--lighter;
+		border: 1px solid $grey--light;
+		@include rempx(margin, 40px 0 8px);
+		@include rempx(padding, 20px 40px);
+
+		p { margin: 0; }
+	}
+
+
+
+
+
+	/**
+	 * [7]	Comments > List of comments
+	 */
+	
+	.c-comments__comments {
+		@include rempx(margin, 40px 0 0);
+	}
+
+
+		.c-comments__list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+
+			.c-comments__item {
+				margin: 0;
+				@include rempx(padding, 0 0 20px);
+				@include mangui-breakpoint("max-width: 800px") { @include rempx(padding-bottom, 40px); }
+			}
+
+
+				.c-comments__comment {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: start;
+				}
+
+
+					.c-comments__comment__content {
+						background: #FFF;
+						width: calc(100% - 13.75rem);
+						@include rempx(padding, 5px 40px);
+
+						@include mangui-breakpoint("max-width: 800px") {
+							width: 100%;
+							@include rempx(padding, 1px 20px);
+						}
+					}
+
+
+					.c-comments__comment__footer {
+						@include rempx(margin-left, 20px);
+						@include mangui-breakpoint("min-width: 801px") { @include rempx(width, 200px); }
+						@include mangui-breakpoint("max-width: 800px") { @include rempx(margin, 20px 0 0); }
+
+
+						.avatar {
+							border-radius: 4px;
+							box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+						}
+					}
+
+
+						.c-comments__comment__author {
+							@include mangui-breakpoint("max-width: 800px") {
+								display: flex;
+								align-items: center;
+							}
+						}
+
+
+						.c-comments__comment__author__avatar {
+							&:not(:empty) {
+								@include rempx(min-width, 96px);
+								@include rempx(margin-right, 20px);
+							}
+
+							&:empty ~ .c-comments__comment__author__name {
+								@include mangui-breakpoint("min-width: 801px") { @include rempx(margin, 25px 0 0); }
+							}
+						}
+
+
+						.c-comments__comment__date {
+							@include rempx(font-size, 13px);
+						}
+
+
+						.c-comments__comment__author__name {
+							margin: 0;
+							line-height: 1.4;
+							@include mangui-breakpoint("min-width: 801px") { @include rempx(margin, 11px 0 0); }
+						}
+
+
+							.c-comments__comment__author__name-link {
+								font-weight: bold;
+							}

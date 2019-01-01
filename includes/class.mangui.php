@@ -136,6 +136,9 @@ if (! class_exists('MangUI')) :
 
 
 			include_once('includes.mangui.helper-functions.php');							// [xxx]
+
+
+			include_once('components/components.social-media-links.php');					// [xxx]
 		}
 
 

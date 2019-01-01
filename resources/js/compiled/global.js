@@ -23,6 +23,7 @@
  * CONTENTS
  *
  * [1]	[Global] Header: Open and close navigation drawer
+ * [2]	[Global] Blog: Expose the comment form
  */
 
 jQuery(function($) {
@@ -43,6 +44,27 @@ jQuery(function($) {
 			$(navEl).removeClass('is-hidden');
 		} else {
 			$(navEl).addClass('is-hidden');
+		}
+	});
+
+
+
+
+
+	/**
+	 * [2]	[Global] Blog: Expose the comment form
+	 *
+	 * 		@since  1.0.0
+	 */
+	
+	$('.js-comments__action--reveal-form').on('click', function(){
+		var commentsForm = $('.js-comments__reveal-form');
+
+
+		if (commentsForm.hasClass('is-hidden')) {
+			$(commentsForm).removeClass('is-hidden');
+		} else {
+			$(commentsForm).addClass('is-hidden');
 		}
 	});
 

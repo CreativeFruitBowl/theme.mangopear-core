@@ -1,0 +1,73 @@
+/**
+ * [Component] Global > Pagination
+ *
+ * Styling for pagination across the entire multisite install
+ *
+ * @category	Component
+ * @package		mangopear
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2018 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	4.0.0
+ * @version   	4.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Head Pagination wrapper
+ * [2]	List
+ * [3]	List items
+ */
+
+
+/**
+ * [1]	Pagination wrapper
+ */
+
+.pagination {
+	@include rempx(margin, 48px 0);
+	@include rempx(padding, 0 16px);
+
+
+	.nav-links {
+	    margin: 0;
+	    line-height: 1;
+	    text-align: center;
+	}
+
+
+
+
+
+	/**
+	 * [2]	Pagination > Links
+	 */
+
+	.nav-links {
+		a.page-numbers {
+		    font-weight: bold;
+		    color: $grey--dark;
+			text-decoration: none;
+		    border: 3px solid $green;
+		    @include rempx(margin, 0 2px 7px);
+		    @include rempx(padding, 16px 20px);
+		    @include mangui-transition(ease-in-out 400ms all);
+	
+
+			&:hover,
+			&:active,
+			&:focus {
+			    border-color: $lime;
+			}
+		}
+
+	
+		.page-numbers {
+		    border-radius: 3px;
+		    display: inline-block;
+		    @include rempx(padding, 13px 17px 10px);
+		}
+	}
+}

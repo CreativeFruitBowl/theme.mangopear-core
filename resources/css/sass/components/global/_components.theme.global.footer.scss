@@ -1,0 +1,153 @@
+/**
+ * [Component] Global header across theme
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ * [2]	Content slot: Free consultation;
+ * [3]	Contact details
+ */
+
+
+/**
+ * [1]  Wrapper
+ */
+
+.c-footer {
+	position: relative;
+	background: #b3d300;
+	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
+	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	@include rempx(padding, 64px 16px 48px);
+	@include mangui-breakpoint(palm) { @include rempx(padding, 16px 16px 32px); }
+}
+
+
+
+
+
+	/**
+	 * [2]	Content slot: Free consultation
+	 */
+
+	.o-content-slot--footer {
+	    height: 0;
+	    max-width: 100%;
+	    padding-bottom: 142.5%;
+		position: relative;
+		background: url(../../images/content-slots/Get-a-free-consultation-from-Mangopear-creative.jpg) top center no-repeat;
+		background-size: cover;
+		@include rempx(max-width, 450px);
+		@include mangui-transition(ease-in-out 400ms all);
+
+
+		&:hover {
+			opacity: 0.85;
+		}
+
+
+		.o-content-slot__block-link {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
+
+
+
+
+	/**
+	 * [3]	Contact details
+	 */
+	
+	.c-footer__contact {
+		@include mangui-breakpoint(palm) { @include rempx(margin-top, 32px); }
+	}
+
+
+		.c-footer__contact__item {
+			margin: 0;
+			& + .c-footer__contact__item { @include rempx(margin-top, 32px); }
+
+			a {
+				color: #FFF;
+				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+			}
+		}
+
+
+			.c-footer__contact__item-title {
+				display: block;
+			}
+
+
+		.o-nav--contact-social {
+			@include rempx(margin-left, -10px);
+
+			.o-nav__link {
+				color: #FFF;
+				@include rempx(padding, 10px);
+
+				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+			}
+		}
+
+
+
+
+
+	/**
+	 * [4]	Legal & copyright
+	 */
+	
+	.o-nav--legal {
+		@include mangui-breakpoint(palm) { @include rempx(margin-top, 16px); }
+
+
+		.o-nav__title {
+		    font-weight: bold;
+		    @include rempx(font-size, 18px);
+		    @include rempx(margin, 0 0 10px);
+		}
+
+	
+			.o-nav__link {
+			    color: #FFF;
+			    text-decoration-color: rgba(255,255,255,.6);
+			    @include rempx(padding, 4px 0);
+			}
+
+
+		.o-nav__list ~ .o-nav__title { @include rempx(margin-top, 25px); }
+	}
+
+
+	.c-copyright {
+		line-height: 1.4;
+		@include rempx(font-size, 15px);
+		@include rempx(margin, 30px 0 0);
+	}

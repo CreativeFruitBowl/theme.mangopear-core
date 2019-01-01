@@ -67,3 +67,27 @@ define(MANGOPEAR_SPRITE, get_site_url() . '/sprites/mangopear-core.svg');
  */
 
 define(BROWSER_TAB_COLOUR, '#499E00');
+
+
+
+
+
+/**
+ * [4]	Image sizes
+ *
+ * 		Custom image sizes for the WordPress theme
+ *
+ * 		@since 1.0.0
+ */
+
+function mangopear_add_image_sizes() {
+	add_image_size('title--s',   500, 325, true);		// [a]
+	add_image_size('title--m',  1000, 375, true);		// [a]
+	add_image_size('title--l',  1500, 400, true);		// [a]
+	add_image_size('title--xl', 2000, 500, true);		// [a]
+
+	add_image_size('blog-lister', 600, 350, true);		// [a]
+}
+
+
+add_action('after_setup_theme', 'mangopear_add_image_sizes');

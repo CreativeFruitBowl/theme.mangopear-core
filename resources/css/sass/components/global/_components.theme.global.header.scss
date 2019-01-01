@@ -82,6 +82,7 @@
 
 	.c-head-navigation__menu {
 		text-align: right;
+		position: relative;
 	}
 
 
@@ -112,34 +113,35 @@
 	 */
 	
 	.c-head-navigation__menu__wrap {
-		left: 50%;
-		width: 100%;
+		right: 0;
 		background: #FFF;
 		text-align: left;
 		position: absolute;
 		border: 1px solid $grey--light;
 		box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-		@include rempx(max-width, 960px);
-		@include rempx(margin, 36px 0 0 -480px);
-		@include mangui-transform-origin(100% 0%);
+		@include rempx(width, 700px);
+		@include rempx(max-width, 700px);
+		@include rempx(margin, 36px 0 0);
+		@include mangui-transform-origin(50% 0%);
 		@include mangui-transition(ease-in-out 600ms all);
 
 
 		@include mangui-breakpoint(portable) {
-			left: 0;
 			overflow: auto;
-			margin-left: 0;
+			width: calc(100vw - 1.25rem);
 		}
 
 
 		&.is-hidden {
 		    opacity: 0;
-		    @include mangui-transform(scale(0));
+		    visibility: hidden;
+		    pointer-events: none;
+		    @include mangui-transform(translateY(-40px) scale(0.92));
 		}
 
 
 		.o-nav {
-			@include rempx(width, 960px);
+			@include rempx(width, 700px);
 		}
 
 
@@ -154,9 +156,8 @@
 						vertical-align: top;
 					}
 
-					&--this-site               { width: 30%; }
-					&[data-nav="also-from-us"] { width: 40%; }
-					&[data-nav="mangopear"]    { width: 30%; }
+					&--this-site               { width: 40%; }
+					&[data-nav="also-from-us"] { width: 60%; }
 
 
 					&--this-site,
