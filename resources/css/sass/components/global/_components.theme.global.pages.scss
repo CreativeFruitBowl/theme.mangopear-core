@@ -24,6 +24,7 @@
  *
  * [1]  Main
  * [2]	Page title
+ * [3]	Twitter embed widgets
  */
 
 
@@ -66,3 +67,33 @@
 	    width: 100%;
 	    @include rempx(margin, 9px 0 54px);
 	}
+
+
+
+
+
+/**
+ * [3]	Twitter embed widgets
+ */
+
+.wp-block-embed-twitter {
+    margin: 1em 0;
+}
+
+
+.c-columns--tweets {
+	.wp-block-column {
+		margin: 0;
+		width: calc(50% - 8px);
+
+		+ .wp-block-column { @include rempx(margin-left, 16px); }
+	}
+
+
+	@include mangui-breakpoint(palm) {
+		.wp-block-column {
+			width: 100%;
+			+ .wp-block-column { margin-left: 0; }
+		}
+	}
+}
