@@ -31,7 +31,6 @@
 	background:         linear-gradient(45deg, $orange 15%, $yellow 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F27500', endColorstr='#F2C500',GradientType=1);
 	@include rempx(padding, 32px 16px);
-	@include rempx(margin, 0 -16px -16px);
 }
 
 
@@ -74,7 +73,7 @@
 	
 	.c-topics__nav {
 		.o-nav__item {
-			@include rempx(padding, 0 26px 12px 0);
+			@include rempx(padding, 0 8px 12px 0);
 		}
 
 
@@ -85,33 +84,9 @@
 				background: $orange;
 				text-decoration: none;
 				border: 1px solid #ba5b02;
-				border-radius: 4px 0 0 4px;
-				@include rempx(padding, 4px 20px 4px 16px);
+				border-radius: 4px;
+				@include rempx(padding, 4px 16px 4px 32px);
 				@include mangui-transition(ease-in-out 400ms all);
-
-
-				&::before {
-					content: '';
-					position: absolute;
-					background: $orange;
-					border-top-right-radius: 3px;
-					border-top: 1px solid #ba5b02;
-					border-right: 1px solid #BA5b02;
-					@include rempx(width, 29px);
-					@include rempx(right, -16px);
-					@include rempx(height, 29px);
-					@include rempx(top, 6px);
-					@include mangui-transition(ease-in-out 400ms all);
-					@include mangui-transform(rotate(45deg));
-
-
-					@include mangui-breakpoint(palm) {
-						@include rempx(width, 28px);
-						@include rempx(right, -15px);
-						@include rempx(height, 28px);
-						@include rempx(top, 4.5px);
-					}
-				}
 
 
 				&::after {
@@ -120,8 +95,8 @@
 					border-radius: 8px;
 					border: 1px solid #f5c9a0;
 					transition: ease-in-out 400ms all;
-					@include rempx(top, 18px);
-					@include rempx(right, 1px);
+					@include rempx(top, 16px);
+					@include rempx(left, 14px);
 					@include rempx(width, 7px);
 					@include rempx(height, 7px);
 					@include mangui-transition(ease-in-out 400ms all);
@@ -130,8 +105,7 @@
 
 				&:hover, &:active, &:focus, &:focus-within {
 					background: $yellow;
-					&::before { background: $yellow; }
-					&::after  { border-color: #FFF; }
+					&::after { border-color: #FFF; }
 				}
 			}
 	}
