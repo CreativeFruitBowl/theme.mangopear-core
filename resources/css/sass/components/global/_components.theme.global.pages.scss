@@ -50,9 +50,9 @@
 
 
 	.c-title__title {
-	    text-align: center;
-	    @include rempx(margin, 58px auto 80px);
-	    @include rempx(max-width, 1000px);
+		text-align: center;
+		@include rempx(margin, 58px auto 80px);
+		@include rempx(max-width, 1000px);
 	}
 
 
@@ -64,8 +64,8 @@
 
 
 	.c-title__image {
-	    width: 100%;
-	    @include rempx(margin, 9px 0 54px);
+		width: 100%;
+		@include rempx(margin, 9px 0 54px);
 	}
 
 
@@ -77,7 +77,7 @@
  */
 
 .wp-block-embed-twitter {
-    margin: 1em 0;
+	margin: 1em 0;
 }
 
 
