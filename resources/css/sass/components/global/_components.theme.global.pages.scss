@@ -25,6 +25,7 @@
  * [1]  Main
  * [2]	Page title
  * [3]	Twitter embed widgets
+ * [4]	Gutenberg blocks: Gallery
  */
 
 
@@ -96,4 +97,16 @@
 			+ .wp-block-column { margin-left: 0; }
 		}
 	}
+}
+
+
+
+
+
+/**
+ * [4]	Gutenberg blocks: Gallery
+ */
+
+.wp-block-gallery .blocks-gallery-item {
+	padding: 0;
 }
