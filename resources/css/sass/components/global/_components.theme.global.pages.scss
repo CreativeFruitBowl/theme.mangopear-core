@@ -26,6 +26,7 @@
  * [2]	Page title
  * [3]	Twitter embed widgets
  * [4]	Gutenberg blocks: Gallery
+ * [5]	Gutenberg blocks: Lists with no bullet points
  */
 
 
@@ -109,4 +110,34 @@
 
 .wp-block-gallery .blocks-gallery-item {
 	padding: 0;
+}
+
+
+
+
+
+/**
+ * [5]	Gutenberg blocks: Lists with no bullet points
+ */
+
+.c-list--no-bullets {
+	li {
+		list-style: none;
+		@include rempx(padding, 0 0 16px 12px);
+
+
+		& > .emoji:first-child {
+			position: absolute;
+			margin: 7px 0 0 -32px !important;
+			margin: 0.4375rem 0 0 -2rem !important;
+		}
+	}
+}
+
+
+.wp-block-columns {
+	.c-list--no-bullets {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
