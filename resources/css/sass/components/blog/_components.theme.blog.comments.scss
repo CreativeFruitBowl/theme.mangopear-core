@@ -71,6 +71,7 @@
 	
 	.c-comments__form-wrap {
 		overflow: hidden;
+		background: #FFF;
 		border: 5px solid $grey--lighter;
 		@include rempx(margin, 37px 0 9px);
 		@include rempx(max-height, 2000px);
@@ -79,7 +80,7 @@
 		@include mangui-breakpoint("max-width: 1000px") {
 			border-left: 0;
 			border-right: 0;
-			@include rempx(margin, 37px -24px 9px);
+			@include rempx(margin, 37px -16px 9px);
 		}
 
 
