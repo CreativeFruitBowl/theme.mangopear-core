@@ -96,7 +96,17 @@
 
 			a {
 				color: #FFF;
-				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+				outline: 3px solid transparent;
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--dark;
+				    text-decoration-color: rgba($grey--dark, 0.4);
+				}
+
+
+				&:focus, &:focus-within { outline-color: $yellow; }
 			}
 		}
 
@@ -111,9 +121,10 @@
 
 			.o-nav__link {
 				color: #FFF;
+			    text-decoration-color: rgba(white, 0.4);
 				@include rempx(padding, 10px);
 
-				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+				&:hover, &:active, &:focus, &:focus-within { color: $grey--dark; }
 			}
 		}
 
@@ -138,8 +149,19 @@
 	
 			.o-nav__link {
 			    color: #FFF;
-			    text-decoration-color: rgba(255,255,255,.6);
+			    outline: 2px solid transparent;
+			    text-decoration-color: rgba(white, 0.4);
 			    @include rempx(padding, 4px 0);
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--dark;
+				    text-decoration-color: rgba($grey--dark, 0.4);
+				}
+
+
+				&:focus, &:focus-within { outline-color: $yellow; }
 			}
 
 
