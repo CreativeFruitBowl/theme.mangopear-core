@@ -56,7 +56,4 @@
 			</div><!-- /.o-container -->
 		</div><!-- /.o-container -->
 	</main><!-- /.o-panel -->
-
-
-	<?php comments_template(); ?>
 <?php get_footer(); ?>

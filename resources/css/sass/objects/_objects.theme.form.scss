@@ -1,0 +1,138 @@
+/**
+ * [Object] Buttons across build
+ *
+ * @category    object
+ * @package     hildon
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @copyright   2018 Mangopear creative
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since       1.13.0
+ * @version     1.13.0
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.13.0
+ *          Initial new styles
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Core
+ * [2]  Fields
+ * [3]  Labels
+ * [4]  Inputs
+ */
+
+/**
+ * [1]  Core
+ */
+
+.o-form {
+
+}
+
+
+
+
+
+    /**
+     * [2]  Fields
+     *
+     *      [a] We need to ensure labels are position relative to the field
+     */
+    
+    .o-field {
+        display: block;
+        position: relative;                                             // [a]
+        @include rempx(margin, 8px 0);
+
+
+        &.is-docked {
+            .o-field__label {
+                pointer-events: unset;
+                @include mangui-transform(scale(1) translateY(0));      // [b]
+            }
+        }
+    }
+
+
+
+
+
+        /**
+         * [3]  Labels
+         *
+         *      [a] Set label to be larger only when JS is enabled (progressive enhancement)
+         *      [b] When field is docked (i.e. clicked or has value) float the label
+         */
+        
+        .o-field__label {
+            line-height: 1.4;
+            position: absolute;
+            color: $grey--dark;
+            pointer-events: none;
+            display: inline-block;
+            transform-origin: 0 50%;
+            background: $grey--lighter;
+            @include rempx(top, -8px);
+            @include rempx(left, 10px);
+            @include rempx(padding, 0 8px);
+            @include rempx(font-size, 12px);
+            @include mangui-transition(ease-in-out 400ms all);
+        }
+
+
+        html.js .o-field__label { @include mangui-transform(scale(1.25) translateY(20px)); }           // [a]
+
+
+
+
+
+        /**
+         * [4]  Inputs
+         */
+        
+        .o-field__input {
+            input, textarea, select {
+                margin: 0;
+                width: 100%;
+                line-height: 1.4;
+                color: $grey--darker;
+                background: $grey--lighter;
+                outline: 3px solid transparent;
+                outline-offset: 0;
+                border: 2px solid $grey--medium;
+                @include rempx(padding, 16px 16px 8px);
+                @include mangui-transition(ease-in-out 400ms all);
+
+
+            &:hover, &:focus, &:active { border-color: $green; }
+            &:focus, &:active          { outline-color: $lime; }
+            }
+        }
+
+
+
+
+
+    /**
+     * [5]  Variant: Single field
+     *
+     *      This variant is for forms where you have only a single 
+     *      input field and a button
+     */
+    
+    .o-field--singular {
+        .o-field__button {
+            position: absolute;
+            outline-offset: 2px;
+            @include rempx(top, 4px);
+            @include rempx(right, 4px);
+            @include rempx(padding, 8px 15px 7px 12px);
+        }
+    }

@@ -1,0 +1,111 @@
+/**
+ * [Component] Global > Blog >> Topics
+ *
+ * @category	Component
+ * @package		mangopear-core
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2019 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	1.0.0
+ * @version   	1.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Wrapper
+ * [2]	Header
+ * [3]	Content
+ */
+
+
+/**
+ * [1]	Wrapper
+ */
+
+.c-topics {
+	background: $orange;
+	background:    -moz-linear-gradient(45deg, $orange 15%, $yellow 100%);
+	background: -webkit-linear-gradient(45deg, $orange 15%, $yellow 100%);
+	background:         linear-gradient(45deg, $orange 15%, $yellow 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F27500', endColorstr='#F2C500',GradientType=1);
+	@include rempx(padding, 32px 16px);
+}
+
+
+
+
+
+	/**
+	 * [2]	Header
+	 */
+	
+	.c-topics__header {
+
+	}
+
+
+		.c-topics__title {
+			color: #FFF;
+			@include rempx(margin, 0 0 32px);
+		}
+
+
+
+
+
+	/**
+	 * [3]	Content
+	 */
+	
+	.c-topics__content {
+
+	}
+
+
+
+
+
+	/**
+	 * [4]	Navigation
+	 */
+	
+	.c-topics__nav {
+		.o-nav__item {
+			@include rempx(padding, 0 8px 12px 0);
+		}
+
+
+			.o-nav__link {
+				color: #FFF;
+				font-weight: bold;
+				position: relative;
+				background: $orange;
+				text-decoration: none;
+				border: 1px solid #ba5b02;
+				border-radius: 4px;
+				@include rempx(padding, 4px 16px 4px 32px);
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				&::after {
+					content: '';
+					position: absolute;
+					border-radius: 8px;
+					border: 1px solid #f5c9a0;
+					transition: ease-in-out 400ms all;
+					@include rempx(top, 16px);
+					@include rempx(left, 14px);
+					@include rempx(width, 7px);
+					@include rempx(height, 7px);
+					@include mangui-transition(ease-in-out 400ms all);
+				}
+
+
+				&:hover, &:active, &:focus, &:focus-within {
+					background: $yellow;
+					&::after { border-color: #FFF; }
+				}
+			}
+	}

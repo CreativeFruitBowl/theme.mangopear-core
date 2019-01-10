@@ -25,7 +25,10 @@
 	<main class="o-main" id="main">
 		<header class="c-title">
 			<div class="o-container">
-				<h1 class="c-title__title">Articles</h1>
+				<h1 class="c-title__title">
+					<span class="h6  c-title__sub-title">Category</span><span class="u-hide"> - </span>
+					<strong><?php single_cat_title(); ?></strong>
+				</h1>
 			</div><!-- /.o-container -->
 		</header>
 

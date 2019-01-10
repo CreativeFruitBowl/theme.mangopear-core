@@ -63,29 +63,29 @@
 
 					$comment_form__args = array(
 						'fields'				=> 	array(
-														'author'	=>	'<div class="o-form__field  o-form__field--inline  o-form__field--name">' .
-																			'<label for="author" class="o-form__label">Your name: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
-																			'<div class="o-form__input"><input type="text" id="author" name="author" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $html_req . '></div>' .
+														'author'	=>	'<div class="o-field  o-field--inline  o-field--name">' .
+																			'<label for="author" class="o-field__label  js-o-field__label">Your name: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
+																			'<div class="o-field__input  js-o-field__input"><input type="text" id="author" name="author" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $html_req . '></div>' .
 																		'</div>',
-														'email'		=>	'<div class="o-form__field  o-form__field--inline  o-form__field--email">' .
-																			'<label for="email" class="o-form__label">Your email address: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
-																			'<div class="o-form__input"><input type="email" id="email" name="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $html_req . '></div>' .
+														'email'		=>	'<div class="o-field  o-field--inline  o-field--email">' .
+																			'<label for="email" class="o-field__label  js-o-field__label">Your email address: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
+																			'<div class="o-field__input  js-o-field__input"><input type="email" id="email" name="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $html_req . '></div>' .
 																		'</div>',
-														'url'		=>	'<div class="o-form__field  o-form__field--inline  o-form__field--url">' .
-																			'<label for="url" class="o-form__label">Your website: </label>' .
-																			'<div class="o-form__input"><input type="url" id="url" name="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200"></div>' .
+														'url'		=>	'<div class="o-field  o-field--inline  o-field--url">' .
+																			'<label for="url" class="o-field__label  js-o-field__label">Your website: </label>' .
+																			'<div class="o-field__input  js-o-field__input"><input type="url" id="url" name="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="200"></div>' .
 																		'</div>',
 													),
-						'comment_field'			=> 	'<div class="o-form__field  o-form__field--comment">' .
-														'<label for="comment" class="o-form__label">Your comment: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
-														'<div class="o-form__input"><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></div>' .
+						'comment_field'			=> 	'<div class="o-field  o-field--comment">' .
+														'<label for="comment" class="o-field__label  js-o-field__label">Your comment: ' . ($req ? '<span class="required">*</span>' : '') . '</label>' .
+														'<div class="o-field__input  js-o-field__input"><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></div>' .
 													'</div>',
 						'title_reply'			=> 	'Leave a comment',
 						'title_reply_to'		=> 	'Reply to %s',
 						'class_form'			=> 	'c-comments__form',
-						'submit_button'			=> 	'<button class="o-button  o-button--primary" type="submit" id="submit" name="submit">' .
+						'submit_button'			=> 	'<button class="o-button  o-button--primary  c-comments__header__action  js-comments__action--reveal-form">' .
 														'<span class="o-button__text">Post comment</span>' .
-														'<svg class="o-button__icon  o-button__icon--right" viewBox="0 0 36 36" width="24" height="24"><rect fill="currentColor" y="16.5" width="31.3" height="3"></rect><polygon fill="currentColor" points="19.2,31.9 17.3,29.6 31.3,18 17.3,6.4 19.2,4.1 36,18 "></polygon></svg>' .
+														'<svg class="o-button__icon  o-button__icon--right" height="24" width="24" role="presentation"><use xlink:href="' . MANGOPEAR_SPRITE . '#arrow--right"/></svg>' .
 													'</button>',
 						'submit_field'			=> 	'<div class="o-form__submit">' .
 														'<div class="o-form__button">%1$s %2$s' .

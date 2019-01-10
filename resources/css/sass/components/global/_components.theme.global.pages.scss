@@ -24,6 +24,9 @@
  *
  * [1]  Main
  * [2]	Page title
+ * [3]	Twitter embed widgets
+ * [4]	Gutenberg blocks: Gallery
+ * [5]	Gutenberg blocks: Lists with no bullet points
  */
 
 
@@ -49,13 +52,92 @@
 
 
 	.c-title__title {
-	    text-align: center;
-	    @include rempx(margin, 64px auto 80px);
-	    @include rempx(max-width, 1000px);
+		text-align: center;
+		@include rempx(margin, 58px auto 80px);
+		@include rempx(max-width, 1000px);
 	}
+
+
+		.c-title__sub-title {
+			color: $green;
+			display: block;
+			text-transform: uppercase;
+		}
 
 
 	.c-title__image {
-	    width: 100%;
-	    @include rempx(margin, 9px 0 54px);
+		width: 100%;
+		@include rempx(margin, 9px 0 54px);
 	}
+
+
+
+
+
+/**
+ * [3]	Twitter embed widgets
+ */
+
+.wp-block-embed-twitter {
+	margin: 1em 0;
+}
+
+
+.c-columns--tweets {
+	.wp-block-column {
+		margin: 0;
+		width: calc(50% - 8px);
+
+		+ .wp-block-column { @include rempx(margin-left, 16px); }
+	}
+
+
+	@include mangui-breakpoint(palm) {
+		.wp-block-column {
+			width: 100%;
+			+ .wp-block-column { margin-left: 0; }
+		}
+	}
+}
+
+
+
+
+
+/**
+ * [4]	Gutenberg blocks: Gallery
+ */
+
+.wp-block-gallery .blocks-gallery-item {
+	padding: 0;
+}
+
+
+
+
+
+/**
+ * [5]	Gutenberg blocks: Lists with no bullet points
+ */
+
+.c-list--no-bullets {
+	li {
+		list-style: none;
+		@include rempx(padding, 0 0 16px 12px);
+
+
+		& > .emoji:first-child {
+			position: absolute;
+			margin: 7px 0 0 -32px !important;
+			margin: 0.4375rem 0 0 -2rem !important;
+		}
+	}
+}
+
+
+.wp-block-columns {
+	.c-list--no-bullets {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
