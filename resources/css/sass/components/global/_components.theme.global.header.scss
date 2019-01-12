@@ -183,11 +183,18 @@
 
 
 						.o-nav__list--second-level {
-							.o-nav__link{
+							.o-nav__link {
+								outline: 2px solid transparent;
+								outline-offset: -2px;
+
+
 								&:hover, &:active, &:focus, &:focus-within {
-								    background: rgba(255,255,255,.2);
 								    color: #FFF;
+								    background: rgba(255,255,255,.2);
 								}
+
+
+								&:focus, &:focus-within { outline-color: $yellow; }
 							}
 						}
 					}
@@ -234,6 +241,8 @@
 								width: 100%;
 								text-decoration: none;
 								padding: 0.3em 1.5em 0.4em;
+								outline: 2px solid transparent;
+								outline-offset: -2px;
 								@include mangui-transition(ease-in-out 400ms all);
 
 
@@ -241,6 +250,9 @@
 									color: $green;
 									background: #F0F0F0;
 								}
+
+
+								&:focus, &:focus-within { outline-color: $green; }
 
 
 								&.o-button {

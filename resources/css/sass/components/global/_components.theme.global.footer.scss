@@ -56,15 +56,7 @@
 	    max-width: 100%;
 	    padding-bottom: 142.5%;
 		position: relative;
-		background: url(../../images/content-slots/Get-a-free-consultation-from-Mangopear-creative.jpg) top center no-repeat;
-		background-size: cover;
 		@include rempx(max-width, 450px);
-		@include mangui-transition(ease-in-out 400ms all);
-
-
-		&:hover {
-			opacity: 0.85;
-		}
 
 
 		.o-content-slot__block-link {
@@ -73,6 +65,15 @@
 			right: 0;
 			bottom: 0;
 			position: absolute;
+			outline: 3px solid transparent;
+			outline-offset: 3px;
+			background: url(../../images/content-slots/Get-a-free-consultation-from-Mangopear-creative.jpg) top center no-repeat;
+			background-size: cover;
+			@include mangui-transition(ease-in-out 400ms all);
+
+
+			&:hover, &:active, &:focus, &:focus-within { opacity: 0.85; }
+			&:focus, &:focus-within { outline-color: $yellow; }
 		}
 	}
 
@@ -95,7 +96,17 @@
 
 			a {
 				color: #FFF;
-				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+				outline: 3px solid transparent;
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--dark;
+				    text-decoration-color: rgba($grey--dark, 0.4);
+				}
+
+
+				&:focus, &:focus-within { outline-color: $yellow; }
 			}
 		}
 
@@ -110,9 +121,10 @@
 
 			.o-nav__link {
 				color: #FFF;
+			    text-decoration-color: rgba(white, 0.4);
 				@include rempx(padding, 10px);
 
-				&:hover, &:active, &:focus, &:focus-within { color: $lime; }
+				&:hover, &:active, &:focus, &:focus-within { color: $grey--dark; }
 			}
 		}
 
@@ -137,8 +149,19 @@
 	
 			.o-nav__link {
 			    color: #FFF;
-			    text-decoration-color: rgba(255,255,255,.6);
+			    outline: 2px solid transparent;
+			    text-decoration-color: rgba(white, 0.4);
 			    @include rempx(padding, 4px 0);
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--dark;
+				    text-decoration-color: rgba($grey--dark, 0.4);
+				}
+
+
+				&:focus, &:focus-within { outline-color: $yellow; }
 			}
 
 

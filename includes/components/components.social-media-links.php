@@ -46,15 +46,6 @@
 			</li>
 
 
-			<li class="o-nav__item  o-nav__item--google">
-				<a title="Follow us on Google+" href="https://google.com/+AndiNorth" target="_blank" class="u-clearfix  o-nav__link">
-					<svg viewBox="0 0 512 512" height="<?php echo $size; ?>" width="<?php echo $size; ?>" class="o-social-icon  o-social-icon--google">
-						<path fill="<?php echo $fill; ?>" d="M416.6 179.9h-41.5v41.5h-20.8v-41.5h-41.5v-20.8h41.5v-41.5h20.8v41.5h41.5V179.9zM299.2 351.6c0 31.1-28.4 69-99.9 69 -52.3 0-95.9-22.5-95.9-60.5 0-29.3 18.5-67.3 105.1-67.3 -12.9-10.5-16-25.1-8.2-41 -50.7 0-76.7-29.8-76.7-67.7 0-37 27.5-70.7 83.7-70.7 14.2 0 90 0 90 0l-20.1 21.1h-23.6c16.7 9.5 25.5 29.2 25.5 50.9 0 19.9-11 36-26.6 48.1 -27.7 21.4-20.6 33.4 8.4 54.6C289.7 309.6 299.2 326.2 299.2 351.6zM243.1 186.8c-4.2-31.8-24.9-58-49.2-58.7 -24.3-0.7-40.5 23.7-36.3 55.5 4.2 31.8 27.2 54.1 51.5 54.8C233.3 239.1 247.3 218.6 243.1 186.8zM268.1 354.8c0-26.2-23.9-51.2-64-51.2 -36.1-0.4-66.8 22.8-66.8 49.8 0 27.5 26.1 50.4 62.2 50.4C245.8 403.7 268.1 382.2 268.1 354.8z"/>
-					</svg>
-				</a>
-			</li>
-
-
 			<li class="o-nav__item  o-nav__item--instagram">
 				<a href="https://instagram.com/MangopearUK/" title="Follow us on Instagram" target="_blank" class="u-clearfix  o-nav__link">
 					<svg viewBox="0 0 512 512" height="<?php echo $size; ?>" width="<?php echo $size; ?>" class="o-social-icon  o-social-icon--instagram">
