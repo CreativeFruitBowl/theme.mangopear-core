@@ -127,7 +127,7 @@ if (! class_exists('MangUI')) :
 
 
 			add_action('init', array($this, 'init'), 5);									// [ii]
-			add_action('init', array($this, 'register_assets'), 5);							// [ii]
+			add_action('init', array($this, 'register_assets'), 1);							// [ii]
 			add_action('init', array($this, 'register_navigations'), 5);					// [iii]
 			add_action('init', array($this, 'register_default_sidebars'), 5);				// [iv]
 			add_filter('widget_text', 'do_shortcode');										// [v]
@@ -220,8 +220,8 @@ if (! class_exists('MangUI')) :
 
 
 			if (! is_admin()) :
-				wp_enqueue_style('mangui-css', mangui_get_dir('/resources/css/compiled/screen.css'));										// [v]
-				wp_enqueue_script('mangui-js', mangui_get_dir('/resources/js/compiled/global'  . $min . '.js'), array('jquery'));			// [vi]
+				wp_enqueue_style('mangui', mangui_get_dir('/resources/css/compiled/screen.css'));										// [v]
+				wp_enqueue_script('mangui', mangui_get_dir('/resources/js/compiled/global'  . $min . '.js'), array('jquery'));			// [vi]
 				wp_localize_script('mangui-js', 'mangui_ajax', array('ajax_url' => admin_url('admin-ajax.php')));							// [vi]
 			endif;
 
