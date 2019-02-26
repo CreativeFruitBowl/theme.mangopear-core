@@ -1,0 +1,83 @@
+/**
+ * [Base] Tables
+ *
+ * This component is part of the "Hildon for your special day" template and has shared 
+ * components throughout the e-commerce process.
+ *
+ * @package     mangui
+ * @category    styles
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @copyright  	2019 Mangopear creative
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since       1.0.0
+ * @version     1.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Responsive table wrapper
+ * [2]  Core elements
+ * [3]  Banded tables
+ */
+
+
+/**
+ * [1]  Responsive table wrapper
+ *
+ *      @since 1.10.0
+ */
+
+.c-table-wrapper {
+	overflow: auto;
+
+	table { @include rempx(width, 700px); }
+}
+
+
+
+
+
+/**
+ * [2]  Core elements
+ *
+ *      @since 1.10.0
+ */
+
+table {
+	width: 100%;
+}
+
+	thead {
+		th { text-align: center; }
+	}
+
+
+	tbody {
+		th { text-align: left; }
+	}
+
+
+		th {
+			font-weight: bold;
+			@include rempx(padding, 5px 10px);
+		}
+
+
+		td {
+			@include rempx(padding, 5px 10px);
+		}
+
+
+.is-style-stripes {
+	tr {
+		&:nth-child(odd)  {
+			th, td {
+				background: $grey--light;
+				border-top: 1px solid $grey--medium;
+				border-bottom: 1px solid $grey--medium;
+			}
+		}
+	}
+}
