@@ -86,6 +86,21 @@
 	 */
 	
 	.c-footer__contact {
+		@include mangui-breakpoint(desk) {
+		    border-left: 1px solid rgba(#FFF, 0.4);
+		    border-right: 1px solid rgba(#FFF, 0.4);
+		    @include rempx(margin, 0 6px);
+		    @include rempx(padding, 0 30px);
+		}
+
+
+		@include mangui-breakpoint(lap) {
+		    border-left: 1px solid rgba(#FFF, 0.4);
+		    @include rempx(margin, 0 6px);
+		    @include rempx(padding, 0 0 0 30px);
+		}
+
+
 		@include mangui-breakpoint(palm) { @include rempx(margin-top, 32px); }
 	}
 
@@ -113,6 +128,7 @@
 
 			.c-footer__contact__item-title {
 				display: block;
+				@include rempx(margin, -5px 0 0);
 			}
 
 
