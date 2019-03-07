@@ -24,7 +24,6 @@
  *
  * [1]	[Global] Header: Open and close navigation drawer
  * [2]	[Global] Blog: Expose the comment form
- * [3]	[Global] Forms: Floating label form fields
  */
 
 jQuery(function($) {
@@ -66,27 +65,6 @@ jQuery(function($) {
 			$(commentsForm).removeClass('is-hidden');
 		} else {
 			$(commentsForm).addClass('is-hidden');
-		}
-	});
-
-
-
-
-
-	/**
-	 * [Global] Forms: Floating label form fields
-	 *
-	 * 		@since 1.0.0
-	 */
-	
-	$('.js-o-field__input').on('focusin', function(){
-		$(this).parent().addClass('is-docked');
-	});
-
-
-	$('.js-o-field__input input, .js-o-field__input textarea, .js-o-field__input select').on('blur', function(){
-		if (! $(this).val().length > 0) {
-			$(this).parent().parent().removeClass('is-docked');
 		}
 	});
 

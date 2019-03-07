@@ -42,7 +42,7 @@
  * 		[f]	Set outline defaults for all buttons
  */
 
-.o-button {
+.o-button, %o-button {
 	border: 0;																						// []
 	margin: 0;																						// []
 	padding: 0;																						// []
@@ -55,7 +55,7 @@
 	outline-offset: 1px;																			// []
 
 	font-weight: bold;																				// []
-	@include rempx(padding, 10px 18px 10px 15px);													// []
+	@include rempx(padding, 10px 24px 10px 21px);													// []
 	@include mangui-transition(ease-in-out 400ms all);												// []
 
 
@@ -81,7 +81,7 @@
 
 
 	.o-button__icon--left  { @include rempx(margin-right, 6px); }									// []
-	.o-button__icon--right { @include rempx(margin-left, 6px);  }									// []
+	.o-button__icon--right { @include rempx(margin-left, 9px);  }									// []
 
 
 
@@ -91,19 +91,20 @@
  * [2]	Variant: Primary
  */
 
-.o-button--primary {
+.o-button--primary, %o-button--primary {
 	color: #FFF;
 	border: 2px solid $green;
 	background-color: $green;
 
 
 	&:hover, &:active, &:focus {
+		color: #FFF;
 		background: $lime;
 		border-color: mangui-shade($lime, 15%);
 	}
 
 
-	&:focus, &:focus-within { outline-color: $lime; }
+	&:focus { outline-color: $lime; }
 }
 
 
@@ -125,7 +126,7 @@
 	}
 
 
-	&:focus, &:focus-within { outline-color: $lime; }
+	&:focus { outline-color: $lime; }
 }
 
 
@@ -140,8 +141,8 @@
 	color: $grey--dark;
 	border: 2px solid $grey--medium;
 
-	&:hover, &:active, &:focus, &:focus-within { border-color: $grey--dark; }
-	&:focus, &:focus-within { outline-color: $grey--medium; }
+	&:hover, &:active, &:focus { border-color: $grey--dark; }
+	&:focus { outline-color: $grey--medium; }
 }
 
 
@@ -154,6 +155,6 @@
 
 .o-button--quaternary {
 	color: $green;
-	&:hover, &:active, &:focus, &:focus-within { color: $orange; }
-	&:focus, &:focus-within { outline-color: $yellow; }
+	&:hover, &:active, &:focus { color: $orange; }
+	&:focus { outline-color: $yellow; }
 }
