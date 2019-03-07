@@ -32,7 +32,7 @@
  * [1]  Core
  */
 
-.o-form {
+.o-form, .frm-show-form {
 
 }
 
@@ -40,99 +40,86 @@
 
 
 
-    /**
-     * [2]  Fields
-     *
-     *      [a] We need to ensure labels are position relative to the field
-     */
-    
-    .o-field {
-        display: block;
-        position: relative;                                             // [a]
-        @include rempx(margin, 8px 0);
-
-
-        &.is-docked {
-            .o-field__label {
-                pointer-events: unset;
-                @include mangui-transform(scale(1) translateY(0));      // [b]
-            }
-        }
-    }
+	/**
+	 * [2]  Fields
+	 *
+	 *      [a] We need to ensure labels are position relative to the field
+	 */
+	
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
 
 
 
 
 
-        /**
-         * [3]  Labels
-         *
-         *      [a] Set label to be larger only when JS is enabled (progressive enhancement)
-         *      [b] When field is docked (i.e. clicked or has value) float the label
-         */
-        
-        .o-field__label {
-            line-height: 1.4;
-            position: absolute;
-            color: $grey--dark;
-            pointer-events: none;
-            display: inline-block;
-            transform-origin: 0 50%;
-            background: $grey--lighter;
-            @include rempx(top, -8px);
-            @include rempx(left, 10px);
-            @include rempx(padding, 0 8px);
-            @include rempx(font-size, 12px);
-            @include mangui-transition(ease-in-out 400ms all);
-        }
-
-
-        html.js .o-field__label { @include mangui-transform(scale(1.25) translateY(20px)); }           // [a]
+		/**
+		 * [3]  Labels
+		 *
+		 *      [a] Set label to be larger only when JS is enabled (progressive enhancement)
+		 *      [b] When field is docked (i.e. clicked or has value) float the label
+		 */
+		
+		label {
+			display: block;
+			font-weight: bold;
+			@include rempx(margin, 24px 0 6px);
+		}
 
 
 
 
 
-        /**
-         * [4]  Inputs
-         */
-        
-        .o-field__input {
-            input, textarea, select {
-                margin: 0;
-                width: 100%;
-                line-height: 1.4;
-                color: $grey--darker;
-                background: $grey--lighter;
-                outline: 3px solid transparent;
-                outline-offset: 0;
-                border: 2px solid $grey--medium;
-                @include rempx(padding, 16px 16px 8px);
-                @include mangui-transition(ease-in-out 400ms all);
+		/**
+		 * [4]  Inputs
+		 */
+		
+		input[type="color"],
+		input[type="date"],
+		input[type="email"],
+		input[type="file"],
+		input[type="number"],
+		input[type="password"],
+		input[type="range"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="url"],
+		textarea,
+		select {
+			margin: 0;
+			width: 100%;
+			background: #FFF;
+			line-height: 1.4;
+			color: $grey--darker;
+			outline: 3px solid transparent;
+			outline-offset: 0;
+			border: 2px solid $grey--medium;
+			@include rempx(padding, 10px 18px 12px);
+			@include mangui-transition(ease-in-out 400ms all);
 
 
-            &:hover, &:focus, &:active { border-color: $green; }
-            &:focus, &:active          { outline-color: $lime; }
-            }
-        }
+			&:hover, &:focus, &:active { border-color: $green; }
+			&:focus, &:active          { outline-color: $lime; }
+		}
 
 
 
 
 
-    /**
-     * [5]  Variant: Single field
-     *
-     *      This variant is for forms where you have only a single 
-     *      input field and a button
-     */
-    
-    .o-field--singular {
-        .o-field__button {
-            position: absolute;
-            outline-offset: 2px;
-            @include rempx(top, 4px);
-            @include rempx(right, 4px);
-            @include rempx(padding, 8px 15px 7px 12px);
-        }
-    }
+		/**
+		 * [5]  Buttons
+		 */
+		
+		.frm_submit {
+			@include rempx(margin, 14px 0 0);
+		}
+
+
+			.frm_button_submit {
+				@extend %o-button;
+				@extend %o-button--primary;
+			}

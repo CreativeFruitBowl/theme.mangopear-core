@@ -42,7 +42,7 @@
  * 		[f]	Set outline defaults for all buttons
  */
 
-.o-button {
+.o-button, %o-button {
 	border: 0;																						// []
 	margin: 0;																						// []
 	padding: 0;																						// []
@@ -91,7 +91,7 @@
  * [2]	Variant: Primary
  */
 
-.o-button--primary {
+.o-button--primary, %o-button--primary {
 	color: #FFF;
 	border: 2px solid $green;
 	background-color: $green;
