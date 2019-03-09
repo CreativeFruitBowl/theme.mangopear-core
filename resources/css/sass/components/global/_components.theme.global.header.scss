@@ -26,6 +26,7 @@
  * [2]	Logo
  * [3]	Menu button
  * [4]	Mega navigation
+ * [5]	Title search
  */
 
 
@@ -261,3 +262,42 @@
 							}
 					}
 	}
+
+
+
+
+
+	/**
+	 * [5]	Title search
+	 */
+	
+	.c-title__search {
+	    border-bottom: 3px solid $grey--light;
+		@include rempx(margin, -52px 0 42px);
+		@include rempx(padding, 0 12px 42px);
+	}
+
+
+		.o-form--search {
+		    display: flex;
+		    align-items: flex-end;
+
+
+			.o-form__field {
+			    width: 100%;
+
+				label { white-space: nowrap; }
+				input[type="text"] { @include rempx(height, 56px); }
+			}
+
+
+			.o-form__action {
+				white-space: nowrap;
+				@include rempx(padding-left, 12px);
+
+
+				.o-button__icon--left {
+					@include mangui-breakpoint(palm) { @include rempx(margin-right, -5px); }
+				}
+			}
+		}
