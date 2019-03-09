@@ -26,10 +26,31 @@
 		<header class="c-title">
 			<div class="o-container">
 				<h1 class="c-title__title">
-					<span class="h6  c-title__sub-title"><?php $taxonomy = get_taxonomy($taxonomy); echo $taxonomy->label; ?></span><span class="u-hide"> - </span>
-					<strong><?php single_cat_title(); ?></strong>
+					<strong>Search results for "<?php echo $_GET['s']; ?>"</strong>
 				</h1>
 			</div><!-- /.o-container -->
+
+
+			<section class="c-title__search">
+				<div class="o-container  o-container--optimise-readability">
+					<form class="o-form  o-form--search" role="search" action="<?php bloginfo('url'); ?>">
+						<input type="hidden" value="Search">
+
+						<div class="o-form__field">
+							<label class="o-form__label" for="s">Search website</label>
+							<input class="o-form__input" type="text" name="s" id="s" value="<?php echo $_GET['s']; ?>">
+						</div><!-- /.c-form__field -->
+
+
+						<div class="o-form__action">
+							<button class="o-button  o-button--primary  o-form__button">
+								<svg class="o-button__icon  o-button__icon--left" height="32" width="32" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#search"/></svg>
+								<span class="o-button__text  u-palm--hide">Search</span>
+							</button>
+						</div>
+					</form>
+				</div><!-- /.o-container -->
+			</section><!-- /.c-title__search -->
 		</header>
 
 
