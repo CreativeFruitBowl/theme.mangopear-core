@@ -49,6 +49,14 @@
 
 				<?php get_template_part('template-partials/pagination'); ?>
 			</div><!-- /.o-container -->
+
+
+		<?php else : ?>
+			<div class="o-container  o-container--optimise-readability">
+				<p style="text-align: center;">No results found, sorry.</p>
+			</div><!-- /.o-container -->
+
+
 		<?php endif; ?>
 	</main><!-- /.o-panel -->
 
