@@ -74,7 +74,7 @@
 								<li class="o-nav__item"><a href="https://mangopear.co.uk/about/" class="o-nav__link">About Mangopear</a></li>
 								<li class="o-nav__item"><a href="https://coding.mangopear.co.uk/" class="o-nav__link">Useful resources</a></li>
 								<li class="o-nav__item"><a href="https://witterings.mangopear.co.uk/" class="o-nav__link">Witterings from Mangopear</a></li>
-								<li class="o-nav__item"><a href="https://mangopear.co.uk/writing/" class="o-nav__link">Press &amp; latest news</a></li>
+								<li class="o-nav__item"><a href="https://blog.mangopear.co.uk/" class="o-nav__link">Press &amp; latest news</a></li>
 							</ul>
 
 

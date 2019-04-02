@@ -24,7 +24,7 @@
 					<li class="o-nav__item"><a href="https://mangopear.co.uk/what-we-do/" class="o-nav__link">What we do</a></li>
 					<li class="o-nav__item"><a href="https://mangopear.co.uk/our-work/"   class="o-nav__link">Our work</a></li>
 					<li class="o-nav__item"><a href="https://mangopear.co.uk/about/"      class="o-nav__link">About us</a></li>
-					<li class="o-nav__item"><a href="https://mangopear.co.uk/writing/"    class="o-nav__link">News &amp; Press</a></li>
+					<li class="o-nav__item"><a href="https://blog.mangopear.co.uk/"       class="o-nav__link">News &amp; Press</a></li>
 					<li class="o-nav__item"><a href="https://mangopear.co.uk/contact/"    class="o-nav__link">Contact us</a></li>
 				</ul>
 			</li>
