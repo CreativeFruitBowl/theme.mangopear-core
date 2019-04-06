@@ -1,0 +1,77 @@
+/**
+ * [Component] Log in form(s)
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Wrapper
+ */
+
+
+/**
+ * [1]	Wrapper
+ *
+ * 		@since 1.0.0
+ */
+
+.c-log-in {
+	@include rempx(margin, 40px 0);
+}
+
+
+
+
+
+	/**
+	 * [2]	Title
+	 */
+	
+	.c-log-in__title {
+		color: $green;
+		border-bottom: 3px solid;
+		@include rempx(padding, 0 0 24px);
+	}
+
+
+
+
+
+	/**
+	 * [3]	Social media log in banner
+	 */
+	
+	.c-log-in__social {
+	    background: #FFF;
+	    border: 2px solid $grey--medium;
+		@include rempx(margin, 36px 0);
+		@include rempx(padding, 24px 36px);
+
+
+		.c-log-in__header__title {
+			@include rempx(margin, 4px 0 22px);
+		}
+
+
+		.c-log-in__header__intro {
+		    line-height: 1.5;
+			@include rempx(margin, 0 0 29px);
+		}
+	}
