@@ -46,8 +46,8 @@
 		    width: 85%;
 		    position: relative;
 		    background: #FCFCFC;
-		    @include rempx(margin, -56px 0 -5px);
-		    @include rempx(padding, 24px 16px 0);
+		    @include rempx(margin, -56px 0 -11px);
+		    @include rempx(padding, 24px 16px 6px);
 		}
 
 
