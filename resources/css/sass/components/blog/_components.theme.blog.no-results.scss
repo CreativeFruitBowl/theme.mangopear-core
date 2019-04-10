@@ -1,0 +1,59 @@
+/**
+ * [Component] Global > Blog >> Topics
+ *
+ * @category	Component
+ * @package		mangopear-core
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2019 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	1.0.0
+ * @version   	1.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Wrapper
+ * [2]	Header
+ * [3]	Content
+ */
+
+
+/**
+ * [1]	Wrapper
+ */
+
+.c-no-results {
+    text-align: center;
+    background: linear-gradient(45deg, $grey--light 15%, $grey--medium 100%);
+    @include rempx(margin, 40px 0);
+    @include rempx(padding, 20px 40px);
+}
+
+
+
+
+
+	/**
+	 * [2]	Header
+	 */
+	
+	.c-no-results__title {
+		@include rempx(margin, 10px 0 25px);
+	}
+
+
+
+
+
+	/**
+	 * [3]	Content
+	 */
+	
+	.c-no-results__content {
+		p {
+			margin: 1em 0;
+			line-height: 1.4;
+		}
+	}

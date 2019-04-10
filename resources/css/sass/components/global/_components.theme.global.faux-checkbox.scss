@@ -1,0 +1,163 @@
+/**
+ * [Component] Faux checkboxes
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Faux check > Wrapper
+ * [2]	Faux check > Input
+ * [3]	Faux check > Label
+ * [4]	Faux check > Our field
+ * [5]	Faux check > Form field label
+ */
+
+
+/**
+ * [1]	Faux check > Wrapper
+ *
+ * 		Outer wrapper for component
+ *
+ * 		@since 1.0.0
+ */
+
+.c-faux-check {
+	cursor: pointer;
+
+
+	&--radio {
+		.c-faux-check__field { border-radius: 20px; }
+	}
+}
+
+
+
+
+
+	/**
+	 * [2]	Faux check > Input
+	 *
+	 * 		This element will be the actual form input element. As it's wrapped
+	 * 		in a <label> and replaced by our bespoke checkbox item we need to hide it.
+	 *
+	 * 		@since 1.0.0
+	 *
+	 * 		[a]	When checkbox is checked
+	 * 		[b]	Change colours of field
+	 * 		[c]	Animate the tick asset
+	 */
+
+	.c-faux-check__input {
+		&:checked {															// [a]
+			+ .c-faux-check__label {
+				.c-faux-check__field {
+					border-color: $lime;									// [b]
+				}
+
+
+					.c-faux-check__field__asset {
+						opacity: 1;											// [c]
+						@include mangui-transform(scale(1));				// [c]
+					}
+			}
+		}
+
+
+		&:focus {
+			+ .c-faux-check__label {
+				.c-faux-check__field {
+					border-color: $lime;									// [b]
+					box-shadow: 0 0 0 3px rgba($green,0.25);
+				}
+			}
+		}
+	}
+
+
+
+
+
+	/**
+	 * [3]	Faux check > Label
+	 *
+	 * 		@since 1.0.0
+	 */
+
+	.c-faux-check__label {
+		padding: 0;
+		cursor: pointer;
+	}
+
+
+
+
+
+		/**
+		 * [4]	Faux check > Our field
+		 *
+		 * 		This is our replacement for the default field and is highly stylised.
+		 *
+		 * 		@since 1.0.0
+		 *
+		 * 		[a]	Important for the positioning of animations
+		 */
+
+		.c-faux-check__field {
+			background: #FFF;
+			position: relative;
+			border-radius: 3px;
+			display: inline-block;
+			border: 2px solid $grey--medium;
+			box-shadow: 0 0 0 3px rgba(0,0,0,0);
+			@include rempx(width, 22px);
+			@include rempx(height, 22px);
+			@include mangui-transition(ease-in-out 350ms all);
+		}
+
+
+			.c-faux-check__field__asset {
+				opacity: 0;
+				color: $green;
+				position: absolute;
+				@include rempx(top, -9px);
+				@include rempx(left, -1px);
+				@include mangui-transform(scale(0));
+				@include mangui-transform-origin(30% 60%);				// [a]
+				@include mangui-transition(ease-in-out 350ms all);
+			}
+
+
+
+
+
+		/**
+		 * [5]	Faux check > Form field label
+		 *
+		 * 		This is the label for our checkbox field.
+		 *
+		 * 		@since 1.0.0
+		 */
+
+		.c-faux-check__label__text {
+			vertical-align: top;
+			display: inline-block;
+			@include rempx(line-height, 22px);
+			@include rempx(padding, 1px 20px 0 10px);
+		}
