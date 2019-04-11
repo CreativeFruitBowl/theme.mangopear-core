@@ -15,6 +15,9 @@
 ?>
 
 
+	<?php get_template_part('template-partials/footer-additions'); ?>
+
+
 	<footer class="c-footer">
 		<div class="o-container">
 			<div class="o-grid">

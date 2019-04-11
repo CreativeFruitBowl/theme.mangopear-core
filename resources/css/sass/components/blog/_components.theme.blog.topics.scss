@@ -60,7 +60,10 @@
 	 */
 	
 	.c-topics__content {
-
+		.c-topics__title {
+		    font-weight: bold;
+		    @include rempx(margin, 24px 0);
+		}
 	}
 
 
@@ -78,13 +81,14 @@
 
 
 			.o-nav__link {
-				color: #FFF;
+				color: $orange;
+				background: #FFF;
 				font-weight: bold;
 				position: relative;
-				background: $orange;
-				text-decoration: none;
-				border: 1px solid #ba5b02;
 				border-radius: 4px;
+				text-decoration: none;
+				border: 2px solid #FFF;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.35);
 				@include rempx(padding, 4px 16px 4px 32px);
 				@include mangui-transition(ease-in-out 400ms all);
 
@@ -93,8 +97,7 @@
 					content: '';
 					position: absolute;
 					border-radius: 8px;
-					border: 1px solid #f5c9a0;
-					transition: ease-in-out 400ms all;
+					border: 1px solid $orange;
 					@include rempx(top, 16px);
 					@include rempx(left, 14px);
 					@include rempx(width, 7px);
@@ -104,7 +107,10 @@
 
 
 				&:hover, &:active, &:focus, &:focus-within {
-					background: $yellow;
+					color: #FFF;
+					background: mangui-shade($orange, 10%);
+					border-color: mangui-shade($orange, 25%);
+
 					&::after { border-color: #FFF; }
 				}
 			}
