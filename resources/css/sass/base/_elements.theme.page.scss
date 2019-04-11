@@ -199,7 +199,21 @@ html {
 		
 		a {
 			text-decoration: underline;
-			@include mangui-transition(ease-in-out 400ms color);
+			outline: 2px solid transparent;
+			outline-offset: 1px;
+			@include mangui-transition(ease-in-out 400ms all);
+
+
+			&:hover, &:active {
+				outline: 2px solid transparent;
+				outline-offset: 1px;
+			}
+
+
+			&:focus, &:focus-within {
+				outline: 2px solid currentColor;
+				outline-offset: 1px;
+			}
 		}
 
 

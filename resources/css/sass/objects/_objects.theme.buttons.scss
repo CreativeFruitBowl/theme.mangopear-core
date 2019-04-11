@@ -60,7 +60,7 @@
 
 
 	+ .o-button { @include rempx(margin-left, 9px); }												// []
-	&:hover, &:active { outline-color: transparent; }
+	&:hover, &:active { outline-color: transparent; }												// []
 
 
 	&:hover, &:active, &:focus, &:focus-within {													// []
@@ -141,7 +141,13 @@
 	color: $grey--dark;
 	border: 2px solid $grey--medium;
 
-	&:hover, &:active, &:focus { border-color: $grey--dark; }
+
+	&:hover, &:active, &:focus {
+		color: $grey--darker;
+		border-color: $grey--dark;
+	}
+
+
 	&:focus { outline-color: $grey--medium; }
 }
 
