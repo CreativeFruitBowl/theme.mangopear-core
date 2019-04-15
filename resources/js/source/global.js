@@ -24,6 +24,7 @@
  *
  * [1]	[Global] Header: Open and close navigation drawer
  * [2]	[Global] Blog: Expose the comment form
+ * [3]	[Global] Enforce LazyLoadXT to check responsive images on page resize
  */
 
 jQuery(function($) {
@@ -66,6 +67,28 @@ jQuery(function($) {
 		} else {
 			$(commentsForm).addClass('is-hidden');
 		}
+	});
+
+
+
+
+
+	/**
+	 * [3]	[Global] Enforce LazyLoadXT to check responsive images on page resize
+	 *
+	 * 		@since 1.0.0
+	 */
+	
+	var resizeTimeout;
+
+	$(window).resize(function(){
+		resizeTimeout = setTimeout(function(){
+			$(window).lazyLoadXT({
+				checkDuplicates: false
+			});
+
+			clearTimeout(resizeTimeout);
+		}, 250);
 	});
 
 });
