@@ -1,0 +1,82 @@
+/**
+ * [Component] Call to action
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Call to action
+ */
+
+
+/**
+ * [1]  Call to action
+ */
+
+.c-cta {
+	display: flex;
+	background: $orange;
+	background: linear-gradient(45deg, $yellow 15%, $orange 100%);
+	@include rempx(margin, 48px 0);
+	@include rempx(padding, 40px 60px);
+
+	@include mangui-breakpoint("max-width: 1000px") { display: block; }
+	@include mangui-breakpoint("max-width:  800px") { @include rempx(padding, 28px 42px); }
+}
+
+
+	.c-cta__title {
+		color: #FFF;
+		font-weight: bold;
+		margin: 0;
+		line-height: 1.1;
+		@include rempx(font-size, 36px);
+		@include rempx(max-width, 600px);
+	}
+
+
+		.c-cta__header {
+			width: 100%;
+		}
+
+
+	.c-cta__action {
+		color: $orange;
+		background: #FFF;
+		border-color: #FFF;
+		align-self: center;
+		white-space: nowrap;
+		display: inline-block;
+		@include rempx(font-size, 19px);
+		@include rempx(margin-left, 40px);
+		@include rempx(padding, 18px 36px 18px 36px);
+		@include mangui-breakpoint("max-width: 1000px") { @include rempx(margin, 36px 0 0); }
+
+
+		&:hover, &:active &:focus, &:focus-within {
+			color: $orange;
+			border-color: #FFF;
+			background: rgba(white, .7);
+		}
+
+		&:focus, &:focus-within {
+			outline-color: #FFF;
+		}
+	}
