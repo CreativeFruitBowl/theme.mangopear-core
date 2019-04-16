@@ -74,10 +74,10 @@
 							<ul class="o-nav__list">
 								<li class="o-nav__item"><a href="https://mangopear.co.uk/what-we-do/" class="o-nav__link">What we do</a></li>
 								<li class="o-nav__item"><a href="https://mangopear.co.uk/our-work/" class="o-nav__link">Our work</a></li>
-								<li class="o-nav__item"><a href="https://mangopear.co.uk/about/" class="o-nav__link">About Mangopear</a></li>
-								<li class="o-nav__item"><a href="https://coding.mangopear.co.uk/" class="o-nav__link">Useful resources</a></li>
-								<li class="o-nav__item"><a href="https://witterings.mangopear.co.uk/" class="o-nav__link">Witterings from Mangopear</a></li>
+								<li class="o-nav__item"><a href="https://mangopear.co.uk/about/" class="o-nav__link">About us</a></li>
 								<li class="o-nav__item"><a href="https://blog.mangopear.co.uk/" class="o-nav__link">Press &amp; latest news</a></li>
+								<li class="o-nav__item"><a href="https://witterings.mangopear.co.uk/" class="o-nav__link">Witterings from Mangopear</a></li>
+								<li class="o-nav__item"><a href="https://coding.mangopear.co.uk/" class="o-nav__link">Coding. A blog from Mangopear</a></li>
 							</ul>
 
 
