@@ -44,6 +44,15 @@
 	
 	.c-article__header {
 		position: relative;
+		padding-top: 58.3333333333%;
+
+
+		.c-article__image {
+		    top: 0;
+		    width: 100%;
+		    max-height: 100%;
+		    position: absolute;
+		}
 	}
 
 
