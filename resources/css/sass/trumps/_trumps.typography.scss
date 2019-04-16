@@ -1,0 +1,34 @@
+/**
+ * [Utilities] Typography
+ *
+ * @category	styles
+ * @package		mangopear-core
+ * @author		Andi North <andi@mangopear.co.uk>
+ * @copyright	2019 Mangopear creative
+ * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @since   	1.0.0
+ * @version   	1.0.0
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]	Larger text
+ */
+
+
+/**
+ * [1]	Larger text
+ *
+ * 		This is to be used when you want to have some prose in a larger font size 
+ * 		with condensed letter spacing, typically within the CMS.
+ *
+ * 		@since 1.0.0
+ */
+
+.u-larger-text {
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+    @include rempx(font-size, 26px);
+}
