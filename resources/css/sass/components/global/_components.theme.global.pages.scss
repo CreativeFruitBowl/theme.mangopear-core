@@ -65,9 +65,22 @@
 		}
 
 
-	.c-title__image {
-		width: 100%;
+	.c-title__image-wrap {
+		position: relative;
 		@include rempx(margin, 9px 0 54px);
+
+		padding-bottom: 25%;
+		@include mangui-breakpoint("max-width: 1500px") { padding-bottom: 26.6666666667% }
+		@include mangui-breakpoint("max-width: 1000px") { padding-bottom: 37.5% }
+		@include mangui-breakpoint("max-width:  500px") { padding-bottom: 65% }
+
+
+		.c-title__image {
+			top: 0;
+			width: 100%;
+			z-index: 99;
+			position: absolute;
+		}
 	}
 
 
