@@ -91,3 +91,27 @@ function mangopear_add_image_sizes() {
 
 
 add_action('after_setup_theme', 'mangopear_add_image_sizes');
+
+
+
+
+
+/**
+ * [5]	Register ACF blocks
+ *
+ * 		@since 1.0.0
+ */
+
+require_once('includes/blocks/block.testimonial.php');
+
+
+
+
+
+/**
+ * [6]	Declare support for wide alignment
+ *
+ * 		@since 1.0.0
+ */
+
+add_theme_support('align-wide');
