@@ -39,6 +39,8 @@
 
 	@include mangui-breakpoint("max-width: 1000px") { display: block; }
 	@include mangui-breakpoint("max-width:  800px") { @include rempx(padding, 28px 42px); }
+
+	@include mangui-breakpoint(portable) { @include rempx(margin, 12px 0); }
 }
 
 
