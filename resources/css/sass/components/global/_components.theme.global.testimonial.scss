@@ -1,0 +1,144 @@
+/**
+ * [Component] Testimonial
+ *
+ * @package     mangopear-brochure
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ */
+
+
+/**
+ * [1]  Wrapper
+ *
+ * 		@since 1.0.0
+ */
+
+.c-testimonial {
+	color: #FFF;
+	background: $orange;
+	background: linear-gradient(45deg, $yellow 15%, $orange 100%);
+	@include rempx(margin, 0 -12px);
+	@include rempx(padding, 36px 36px 48px 12px);
+	@include mangui-breakpoint(palm) { @include rempx(padding-right, 18px); }
+}
+
+
+
+
+
+	/**
+	 * [2]	Content
+	 */
+	
+	.c-testimonial__content {
+		position: relative;
+		@include rempx(max-width, 900px);
+		@include rempx(padding, 0 0 0 136px);
+		@include mangui-breakpoint("max-width: 700px") { @include rempx(padding, 96px 0 0 24px); }
+		@include mangui-breakpoint(palm) { @include rempx(padding-left, 6px); }
+
+		p { text-indent: 0; }
+	}
+
+
+
+
+
+	/**
+	 * [3]	Quote marks
+	 */
+	
+	.c-testimonial__content p::before, .c-testimonial .c-testimonial__content p::after {
+		display: none;
+	}
+
+
+
+
+
+	/**
+	 * [4]	Icon
+	 */
+	
+	.c-testimonial__content {
+		&::before {
+			left: 0;
+			top: 50%;
+			content: '';
+			background: #FFF;
+			position: absolute;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+			@include rempx(width, 100px);
+			@include rempx(height, 100px);
+			@include rempx(margin, -10px 0 0);
+			@include rempx(border-radius, 100px);
+
+
+			@include mangui-breakpoint("max-width: 700px") {
+				top: 0;
+				left: 50%;
+				@include rempx(margin, 0 0 0 -50px);
+			}
+		}
+
+
+		&::after {
+			left: 0;
+			top: 50%;
+			color: $yellow;
+			content: "\275D";
+			position: absolute;
+			text-align: center;
+			@include rempx(font-size, 108px);
+			@include rempx(width, 98px);
+			@include rempx(margin, -15px 0 0);
+
+
+			@include mangui-breakpoint("max-width: 700px") {
+				top: 0;
+				left: 50%;
+				@include rempx(margin, -5px 0 0 -50px);
+			}
+		}
+	}
+
+
+
+
+
+	/**
+	 * [5]	Footer
+	 */
+	
+	.c-testimonial__footer {
+		color: #FFF;
+		line-height: 1.2;
+		border-top: 2px solid rgba(255,255,255,0.25);
+		@include rempx(font-size, 22px);
+		@include rempx(max-width, 750px);
+		@include rempx(padding, 15px 0 0);
+		@include rempx(margin, 35px 0 0 135px);
+		@include mangui-breakpoint("max-width: 700px") { @include rempx(margin, 35px 0 0 24px); }
+		@include mangui-breakpoint(palm) { @include rempx(margin-left, 6px); }
+
+		cite { font-style: normal; }
+	}
