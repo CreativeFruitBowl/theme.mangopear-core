@@ -33,7 +33,6 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title><?php the_title(); ?> | <?php bloginfo('name'); ?></title>
 		
 
 		<!-- Make this site responsive, dude -->

@@ -115,3 +115,15 @@ require_once('includes/blocks/block.testimonial.php');
  */
 
 add_theme_support('align-wide');
+
+
+
+
+
+/**
+ * [6]	Declare support for title tag
+ *
+ * 		@since 1.0.0
+ */
+
+add_theme_support('title-tag');
