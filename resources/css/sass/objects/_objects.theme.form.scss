@@ -26,6 +26,7 @@
  * [2]  Fields
  * [3]  Labels
  * [4]  Inputs
+ * [5]	Error messages
  */
 
 /**
@@ -123,3 +124,27 @@
 				@extend %o-button;
 				@extend %o-button--primary;
 			}
+
+
+
+
+
+		/**
+		 * [6]	Error messages
+		 */
+		
+		.frm_error,
+		.frm_error_style {
+		    color: #FFF;
+		    background: $red;
+		    background: linear-gradient(45deg, $red 15%, mangui-shade($red, 20%) 100%);
+		    line-height: 1.3;
+		    @include rempx(padding, 12px 24px);
+		    @include rempx(margin, 6px 0 30px);
+
+
+		    &.frm_error_style {
+		    	margin-bottom: 0;
+		    	font-weight: bold;
+		    }
+		}
