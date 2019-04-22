@@ -64,8 +64,10 @@
 
 
 	&:hover, &:active, &:focus, &:focus-within {													// []
-		.o-button__icon--left.is-animated { @include mangui-transform(scale(1.1)); }				// []
-		.o-button__icon--right 		      { @include mangui-transform(translateX(3px)); }			// []
+		.o-button__icon--right:not(.is-not-animated) { @include mangui-transform(translateX(3px)); }// []
+
+		.o-button__icon--left.is-animated,
+		.o-button__icon--right.is-animated--grow	 { @include mangui-transform(scale(1.2)); }		// []
 	}																								// []
 }
 
