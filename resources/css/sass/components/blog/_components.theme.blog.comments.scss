@@ -132,13 +132,6 @@
 		 */
 		
 		.c-comments__form {
-			@include mangui-breakpoint("min-width: 1001px") {
-				.o-form__field--inline { display: flex; }
-					.o-form__field--inline .o-form__input, .acf-comment-fields .acf-input { width: 70%; }
-					.o-form__field--inline .o-form__label, .acf-comment-fields .acf-label { width: 30%; }
-			}
-
-
 			.o-form__input {
 				width: 100%;
 			}
@@ -146,61 +139,6 @@
 
 			.o-form__label {
 				@include mangui-breakpoint("max-width: 1000px") { padding-bottom: 0; }
-			}
-
-
-			.acf-comment-fields {
-				@include rempx(margin, -9px 0 0);
-
-
-				.field_type-star_rating {
-					display: inline-block;
-				}
-
-
-					.acf-field {
-						margin: 0;
-						align-content: center;
-						@include mangui-breakpoint("min-width: 1001px") { display: flex; }
-
-
-						.acf-input {
-							vertical-align: middle;
-
-
-							.button {
-								position: relative;
-								@include rempx(top, -2px);
-								@include rempx(margin-left, 15px);
-							}
-						}
-
-
-						.acf-label {
-							display: inline-block;
-							@include rempx(margin, 10px 0 0);
-							@include mangui-breakpoint("max-width: 1000px") { width: 100%; }
-						}
-
-
-						.star-rating {
-							margin: 0;
-							clear: both;
-							cursor: default;
-							background: #FFF;
-							display: inline-block;
-							border: 1px solid $grey--lighter;
-							@include rempx(padding, 5px 15px);
-
-
-							li {
-								float: none;
-								display: inline-block;
-								@include rempx(padding, 0 5px);
-								@include rempx(font-size, 22px);
-							}
-						}
-					}
 			}
 
 
