@@ -20,7 +20,7 @@
 	<section class="c-log-in__form">
 		<header class="c-log-in__header">
 			<h3 class="c-log-in__header__title">Log in now</h3>
-			<p class="c-log-in__header__intro">Log in to Mangopear with your email address and password. If you can't remember your password you can <a href="/wp-login.php?action=lostpassword">easily reset it</a>.</p>
+			<p class="c-log-in__header__intro">Log in with your email address and password. If you can't remember your password you can <a href="/wp-login.php?action=lostpassword">easily reset it</a>.</p>
 		</header><!-- /.c-log-in__header -->
 
 
