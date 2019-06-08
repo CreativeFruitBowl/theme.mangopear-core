@@ -38,15 +38,35 @@ jQuery(function($) {
 	 * 		[a]	
 	 */
 
+	var mainNav    = $('.js-head-navigation__menu__wrap');
+	var searchForm = $('.js-head-navigation__search__wrap');
+	var accountNav = $('.js-head-navigation__account__wrap');
+
+
 	$('.js-head-navigation__menu__launcher').on('click', function(){
-		var navEl = $('.js-head-navigation__menu__wrap');
+		$(searchForm).addClass('is-hidden');
+		$(accountNav).addClass('is-hidden');
+
+		if ($(mainNav).hasClass('is-hidden')) { $(mainNav).removeClass('is-hidden'); }
+		else                                { $(mainNav).addClass('is-hidden');    }
+	});
 
 
-		if ($(navEl).hasClass('is-hidden')) {
-			$(navEl).removeClass('is-hidden');
-		} else {
-			$(navEl).addClass('is-hidden');
-		}
+	$('.js-head-navigation__search__launcher').on('click', function(){
+		$(mainNav).addClass('is-hidden');
+		$(accountNav).addClass('is-hidden');
+
+		if ($(searchForm).hasClass('is-hidden')) { $(searchForm).removeClass('is-hidden'); }
+		else                                { $(searchForm).addClass('is-hidden');    }
+	});
+
+
+	$('.js-head-navigation__account__launcher').on('click', function(){
+		$(mainNav).addClass('is-hidden');
+		$(searchForm).addClass('is-hidden');
+
+		if ($(accountNav).hasClass('is-hidden')) { $(accountNav).removeClass('is-hidden'); }
+		else                                     { $(accountNav).addClass('is-hidden');    }
 	});
 
 

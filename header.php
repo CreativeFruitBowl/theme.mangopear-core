@@ -60,17 +60,11 @@
 
 
 					<div class="o-grid__item  u-one-half">
-						<nav class="c-head-navigation__menu">
-							<button class="o-button  o-button--secondary  c-head-navigation__menu__launcher  js-head-navigation__menu__launcher" type="button">
-								<svg class="o-button__icon  o-button__icon--left" height="22" width="22" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#navigation"/></svg>
-								<span class="o-button__text">Menu</span>
-							</button>
-
-
-							<div class="c-head-navigation__menu__wrap  js-head-navigation__menu__wrap  is-hidden">
-								<?php get_template_part('template-partials/main-navigation'); ?>
-							</div><!-- /.c-head-navigation__menu__wrap -->
-						</nav>
+						<div class="c-head__buttons">
+							<?php get_template_part('template-partials/global/header/main-menu'); ?>
+							<?php get_template_part('template-partials/global/header/account-menu'); ?>
+							<?php get_template_part('template-partials/global/header/search'); ?>
+						</div><!-- /.c-head__buttons -->
 					</div><!-- /.o-grid__item -->
 				</div><!-- /.o-grid -->
 			</div><!-- /.o-container -->
