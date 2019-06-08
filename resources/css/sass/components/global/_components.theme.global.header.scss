@@ -35,11 +35,8 @@
  */
 
 .c-head-navigation {
-	background: #b3d300;
-	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
-	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	background: $green;
+	background: linear-gradient(45deg, $lime 15%, $green 100%);
 	@include rempx(padding, 0 .75rem);
 }
 
@@ -75,19 +72,20 @@
 
 
 	/**
-	 * [3]	Menu button
+	 * [3]	Row of actions
+	 *
+	 * 		@since 1.2.0
 	 */
 	
 	$nav--off-white: #bcd971;
 
 
-	.c-head-navigation__menu {
+	.c-head__buttons {
 		text-align: right;
-		position: relative;
 	}
 
 
-		.c-head-navigation__menu__launcher {
+		.c-head__button {
 			color: #FFF;
 			border-color: $nav--off-white;
 
@@ -106,13 +104,25 @@
 		}
 
 
+		.c-head__search,
+		.c-head-navigation__menu {
+			display: inline-block;
+		}
+
+
 
 
 
 	/**
 	 * [4]	Mega navigation
 	 */
-	
+
+	.c-head-navigation__menu {
+		text-align: right;
+		position: relative;
+	}
+
+
 	.c-head-navigation__menu__wrap {
 		right: 0;
 		background: #FFF;
@@ -268,13 +278,41 @@
 
 
 	/**
-	 * [5]	Title search
+	 * [5]	Search
 	 */
 	
-	.c-title__search {
-	    border-bottom: 3px solid $grey--light;
-		@include rempx(margin, -52px 0 42px);
-		@include rempx(padding, 0 12px 42px);
+	.c-head__search__reveal {
+		top: 0;
+	    left: 0;
+	    right: 0;
+	    color: #FFF;
+	    z-index: 999;
+	    text-align: left;
+	    position: absolute;
+		background: $green;
+		background: linear-gradient(45deg, $green 15%, $lime 100%);
+		@include rempx(padding, 17px 12px 16px);
+		@include mangui-transition(ease-in-out 400ms all);
+
+
+		&.is-hidden { @include rempx(top, -175px); }
+
+
+		.o-form__label { display: none; }
+
+
+		input[type="text"],
+		input[type="search"] {
+			color: #FFF;
+		    background: none;
+		    border: 2px solid #FFF;
+			box-sizing: border-box;
+
+
+			@include mangui-placeholder() {
+				color: rgba(255,255,255,0.5);
+			}
+		}
 	}
 
 
@@ -286,8 +324,16 @@
 			.o-form__field {
 			    width: 100%;
 
-				label { white-space: nowrap; }
-				input[type="text"] { @include rempx(height, 56px); }
+
+				label {
+					white-space: nowrap;
+				}
+
+
+				input[type="text"],
+				input[type="search"] {
+					@include rempx(height, 56px);
+				}
 			}
 
 
@@ -301,3 +347,16 @@
 				}
 			}
 		}
+
+
+	body.admin-bar .c-head__search__reveal {
+		@include rempx(top, 32px);
+		&.is-hidden { @include rempx(top, -175px); }
+	}
+
+
+	.c-title__search {
+	    border-bottom: 3px solid $grey--light;
+		@include rempx(margin, -52px 0 42px);
+		@include rempx(padding, 0 12px 42px);
+	}
