@@ -28,6 +28,8 @@
 			<form name="loginform" id="loginform" method="post" action="/wp-login.php">
 				<?php if ($_GET['redirect_to'] != "") : ?>
 					<input type="hidden" name="redirect_to" value="<?php echo $_GET['redirect_to']; ?>"/>
+				<?php else : ?>
+					<input type="hidden" name="redirect_to" value="<?php echo get_site_url(); ?>"/>
 				<?php endif; ?>
 
 
