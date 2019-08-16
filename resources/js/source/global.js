@@ -26,6 +26,7 @@
  * [2]	[Global] Blog: Expose the comment form
  * [3]	[Global] Enforce LazyLoadXT to check responsive images on page resize
  * [4]	[Global] Smoothly scroll to anchors
+ * [5]	[Global] Add SVG polyfill
  */
 
 jQuery(function($) {
@@ -136,5 +137,17 @@ jQuery(function($) {
 			}
 		}
 	});
+
+
+
+
+
+	/**
+	 * [5]	[Global] Add SVG polyfill
+	 *
+	 * 		@since 1.0.0
+	 */
+	
+	svg4everybody();
 
 });
