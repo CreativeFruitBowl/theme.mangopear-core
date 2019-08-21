@@ -17,6 +17,7 @@
  * [1]	Wrapper
  * [2]	Header
  * [3]	Content
+ * [4] Variant: No header image
  */
 
 
@@ -84,4 +85,26 @@
 	
 	.c-article__content {
 		@include rempx(padding, 0 16px);
+	}
+
+
+
+
+
+	/**
+	 * [4] Variant: No header image
+	 */
+
+	.c-article {
+		&.has-no-image {
+			.c-article__header {
+				padding-top: 0;
+			}
+
+
+			.c-article__title {
+				margin-top: 0;
+				background: none;
+			}
+		}
 	}

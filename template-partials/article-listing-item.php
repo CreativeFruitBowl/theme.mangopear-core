@@ -14,7 +14,7 @@
 	
 ?>
 
-	<article class="c-article">
+	<article class="c-article  <?php if (! has_post_thumbnail(get_the_ID())) { echo 'has-no-image'; } ?>">
 		<header class="c-article__header">
 			<img class="c-article__image" alt="<?php the_title(); ?>" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'blog-lister'); ?>">
 
