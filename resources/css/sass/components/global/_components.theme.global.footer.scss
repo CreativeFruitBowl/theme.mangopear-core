@@ -107,6 +107,7 @@
 
 		.c-footer__contact__item {
 			margin: 0;
+		    color: #FFF;
 			& + .c-footer__contact__item { @include rempx(margin-top, 32px); }
 
 			a {
@@ -128,6 +129,7 @@
 
 			.c-footer__contact__item-title {
 				display: block;
+			    color: $green--pastel;
 				@include rempx(margin, -5px 0 0);
 			}
 
@@ -158,6 +160,7 @@
 
 		.o-nav__title {
 		    font-weight: bold;
+		    color: $green--pastel;
 		    @include rempx(font-size, 18px);
 		    @include rempx(margin, 0 0 10px);
 		}
