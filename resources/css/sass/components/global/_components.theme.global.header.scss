@@ -35,8 +35,11 @@
  */
 
 .c-head-navigation {
-	background: $green;
-	background: linear-gradient(45deg, $lime 15%, $green 100%);
+	background: #2D8600;
+	background:    -moz-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background: -webkit-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background:         linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fbb05', endColorstr='#2D8600', GradientType=1);
 	@include rempx(padding, 0 .75rem);
 }
 
