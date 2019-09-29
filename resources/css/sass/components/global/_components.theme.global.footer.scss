@@ -34,11 +34,11 @@
 
 .c-footer {
 	position: relative;
-	background: #b3d300;
-	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
-	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	background: #2D8600;
+	background:    -moz-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background: -webkit-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background:         linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fbb05', endColorstr='#2D8600', GradientType=1);
 	@include rempx(padding, 64px 16px 48px);
 	@include mangui-breakpoint(palm) { @include rempx(padding, 16px 16px 32px); }
 }
