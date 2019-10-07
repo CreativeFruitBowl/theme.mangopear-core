@@ -108,7 +108,10 @@
 		.c-footer__contact__item {
 			margin: 0;
 		    color: #FFF;
+
+
 			& + .c-footer__contact__item { @include rempx(margin-top, 32px); }
+
 
 			a {
 				color: #FFF;
@@ -136,6 +139,7 @@
 
 		.o-nav--contact-social {
 			@include rempx(margin-left, -10px);
+
 
 			.o-nav__link {
 				color: #FFF;
