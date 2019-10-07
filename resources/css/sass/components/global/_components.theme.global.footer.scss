@@ -117,8 +117,8 @@
 
 
 				&:hover, &:active, &:focus, &:focus-within {
-					color: $grey--dark;
-				    text-decoration-color: rgba($grey--dark, 0.4);
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
 				}
 
 
@@ -142,7 +142,11 @@
 			    text-decoration-color: rgba(white, 0.4);
 				@include rempx(padding, 10px);
 
-				&:hover, &:active, &:focus, &:focus-within { color: $grey--dark; }
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
+				}
 			}
 		}
 
@@ -175,8 +179,8 @@
 
 
 				&:hover, &:active, &:focus, &:focus-within {
-					color: $grey--dark;
-				    text-decoration-color: rgba($grey--dark, 0.4);
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
 				}
 
 
