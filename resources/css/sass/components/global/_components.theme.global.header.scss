@@ -89,13 +89,17 @@
 
 
 		.c-head__button {
-			color: #FFF;
-			border-color: $nav--off-white;
+		    outline: 0;
+		    color: $green;
+		    background: #FFF;
+		    border-radius: 4px;
+		    border: 2px solid #FFF;
+		    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 
 
 			&:hover, &:active, &:focus, &:focus-within {
-				border-color: #FFF;
 				background: $nav--off-white;
+				border-color: $nav--off-white;
 			}
 
 
