@@ -25,6 +25,7 @@
  * [1]  Wrapper
  * [2]	Popup wrapper
  * [3]	Nav reveal button
+ * [4]	Mega nav > Sections
  */
 
 
@@ -111,4 +112,18 @@
 			text-transform: uppercase;
 			@include rempx(font-size, 14px);
 		}
+	}
+
+
+
+
+
+	/**
+	 * [4]	Mega nav > Sections
+	 */
+	
+	.c-mega-nav__section {
+		@include rempx(padding, 25px 25px 25px 55px);
+
+		&--secondary { background: #f3f3f3; }
 	}
