@@ -46,14 +46,19 @@
 
 	/**
 	 * [2]	Popup wrapper
+	 *
+	 * 		[a] Required for responsive devices otherwise limits to container
 	 */
 	
 	.c-mega-nav__wrap {
 		right: 0;
+		width: 100%;
 		z-index: 99000;
 		text-align: left;
 		position: absolute;
+		width: calc(100vw - 24px);								// [a]
 		@include rempx(top, 62px);
+		@include rempx(max-width, 400px);
 		@include mangui-transform-origin(50% 0%);
 		@include mangui-transition(ease-in-out 300ms all);
 
@@ -80,6 +85,7 @@
 
 
 		.c-mega-nav__overflow {
+			width: 100%;
 			background: #FFF;
 			overflow-y: auto;
 			border-radius: 4px;
