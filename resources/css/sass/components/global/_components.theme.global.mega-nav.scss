@@ -28,6 +28,7 @@
  * [4]	Mega nav > Sections
  * [5]	Mega nav > Section > Header
  * [6]	Mega nav > Menus
+ * [7]	Mega nav > Section > Split nav
  */
 
 
@@ -177,5 +178,38 @@
 				&:hover, &:active, &:focus {
 					text-decoration-color: currentColor;
 				}
+			}
+	}
+
+
+
+
+
+	/**
+	 * [7]	Mega nav > Section > Split nav
+	 */
+	
+	.c-mega-nav__split {
+		.o-nav__list {
+			vertical-align: top;
+			display: inline-block;
+			@include rempx(font-size, 15px);
+
+
+			@include mangui-breakpoint("min-width: 360px") {
+				width: calc(50% - 1rem);
+				+ .o-nav__list { @include rempx(margin-left, 25px); }
+			}
+		}
+
+
+			.o-nav__link {
+				@include rempx(padding, 2px 0);
+			}
+
+
+			.o-nav__text {
+				font-weight: bold;
+				@include rempx(padding, 0 0 3px);
 			}
 	}
