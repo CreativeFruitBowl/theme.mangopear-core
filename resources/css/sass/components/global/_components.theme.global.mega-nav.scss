@@ -27,6 +27,7 @@
  * [3]	Nav reveal button
  * [4]	Mega nav > Sections
  * [5]	Mega nav > Section > Header
+ * [6]	Mega nav > Menus
  */
 
 
@@ -151,4 +152,30 @@
 
 		.c-mega-nav__header__text {
 			text-transform: uppercase;
+		}
+
+
+
+
+
+	/**
+	 * [6]	Mega nav > Menus
+	 */
+	
+	.o-nav--main {
+		.o-nav__list {
+			@include rempx(font-size, 17px);
+			@include rempx(margin, 12px 0 0);
+		}
+
+
+			.o-nav__link {
+				text-decoration-color: transparent;
+				@include rempx(padding, 3px 0);
+
+
+				&:hover, &:active, &:focus {
+					text-decoration-color: currentColor;
+				}
+			}
 	}
