@@ -26,6 +26,7 @@
  * [2]	Popup wrapper
  * [3]	Nav reveal button
  * [4]	Mega nav > Sections
+ * [5]	Mega nav > Section > Header
  */
 
 
@@ -126,4 +127,28 @@
 		@include rempx(padding, 25px 25px 25px 55px);
 
 		&--secondary { background: #f3f3f3; }
+	}
+
+
+
+
+
+	/**
+	 * [5]	Mega nav > Section > Header
+	 */
+	
+	.c-mega-nav__header {
+		position: relative;
+	}
+
+
+		.c-mega-nav__header__icon {
+			position: absolute;
+			@include rempx(top, 8px);
+			@include rempx(left, -40px);
+		}
+
+
+		.c-mega-nav__header__text {
+			text-transform: uppercase;
 	}
