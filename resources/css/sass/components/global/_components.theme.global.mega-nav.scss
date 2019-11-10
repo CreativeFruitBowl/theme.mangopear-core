@@ -29,6 +29,7 @@
  * [5]	Mega nav > Section > Header
  * [6]	Mega nav > Menus
  * [7]	Mega nav > Section > Split nav
+ * [8]	Mega nav > Bold navigation items
  */
 
 
@@ -219,3 +220,50 @@
 				@include rempx(padding, 0 0 3px);
 			}
 	}
+
+
+
+
+
+	/**
+	 * [8]	Mega nav > Bold navigation items
+	 */
+	
+	.c-mega-nav__bold {
+		line-height: 1;
+		position: relative;
+
+
+		.o-nav__link {
+			text-decoration: none;
+			@include rempx(padding, 10px 0);
+
+
+			&:hover, &:active, &:focus {
+				.c-mega-nav__bold__title { text-decoration-color: $lime; }
+			}
+		}
+	}
+
+
+		.c-mega-nav__bold__icon {
+			position: absolute;
+			@include rempx(top, 7px);
+			@include rempx(left, -36px);
+		}
+
+
+		.c-mega-nav__bold__title {
+			display: block;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: ease-in-out text-decoration-color 350ms;
+			@include rempx(padding, 0 0 2px);
+		}
+
+
+		.c-mega-nav__bold__description {
+			font-style: italic;
+			color: $grey--dark;
+			@include rempx(font-size, 14px);
+		}
