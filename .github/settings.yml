@@ -1,0 +1,101 @@
+# Set up default repository settings
+# 
+# Labels
+labels:
+
+  #####
+  # Types of work
+  #####
+
+  # Mangopear lime label, bespoke
+  - name: "Work: Accessibility"
+    oldname: Accessibility
+    description: Not as accessible as it could or should be
+    color: B3D300
+
+  # Mangopear lime label, bespoke
+  - name: "Work: Content"
+    oldname: Content
+    description: A wordsmith needs to have a play with this
+    color: B3D300
+
+  # Mangopear lime label, bespoke
+  - name: "Work: Design"
+    oldname: Design
+    description: Something needs to be prettier
+    color: B3D300
+
+  # Mangopear lime label, bespoke
+  - name: "Work: Development"
+    oldname: Development
+    description: A techy needs to work on this
+    color: B3D300
+
+  # Mangopear lime label, bespoke
+  - name: "Work: Updates"
+    oldname: Updates
+    description: Software updates included
+    color: B3D300
+
+
+  ######
+  # Dismissed labels
+  ######
+
+  # Mangopear light grey label, GitHub default amended
+  - name: "Dismiss: As duplicate"
+    oldname: duplicate
+    description: This issue or pull request already exists
+    color: E4E4E4
+
+  # Mangopear medium grey label, GitHub default amended
+  - name: "Dismiss: As invalid"
+    oldname: invalid
+    description: This doesn't seem right
+    color: c4c4c4
+
+  # Mangopear dark grey label, GitHub default amended
+  - name: "Dismiss: As won't fix"
+    oldname: wontfix
+    description: This will not be worked on
+    color: 595959
+
+
+  ######
+  # Types
+  ######
+
+  # Mangopear red label, GitHub default amended
+  - name: "Type: Bug"
+    oldname: bug
+    description: Something isn't working
+    color: F22000
+
+  # Mangopear orange grey label, bespoke
+  - name: "Type: Enhancement"
+    oldname: enhancement
+    description: New feature or request
+    color: F27500
+
+  # Mangopear orange label, GitHub default amended
+  - name: "Type: Question"
+    oldname: question
+    description: Further information is requested
+    color: F27500
+
+
+  ######
+  # Handover
+  ######
+
+  # Mangopear yellow label, GitHub default amended
+  - name: "Help wanted"
+    oldname: help wanted
+    description: Extra attention is needed
+    color: F2C500
+
+  # Mangopear yellow label, bespoke
+  - name: "Testing"
+    oldname: Testing
+    description: Almost ready to release, just need to check it over
+    color: F2C500
