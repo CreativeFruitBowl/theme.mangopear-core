@@ -34,11 +34,11 @@
 
 .c-footer {
 	position: relative;
-	background: #b3d300;
-	background: -moz-linear-gradient(45deg, #b3d300 15%, #499e00 100%);
-	background: -webkit-linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	background: linear-gradient(45deg, #b3d300 15%,#499e00 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3d300', endColorstr='#499e00',GradientType=1 );
+	background: #2D8600;
+	background:    -moz-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background: -webkit-linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	background:         linear-gradient(45deg, #9fbb05 15%, #2D8600 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fbb05', endColorstr='#2D8600', GradientType=1);
 	@include rempx(padding, 64px 16px 48px);
 	@include mangui-breakpoint(palm) { @include rempx(padding, 16px 16px 32px); }
 }
@@ -107,7 +107,11 @@
 
 		.c-footer__contact__item {
 			margin: 0;
+		    color: #FFF;
+
+
 			& + .c-footer__contact__item { @include rempx(margin-top, 32px); }
+
 
 			a {
 				color: #FFF;
@@ -116,8 +120,8 @@
 
 
 				&:hover, &:active, &:focus, &:focus-within {
-					color: $grey--dark;
-				    text-decoration-color: rgba($grey--dark, 0.4);
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
 				}
 
 
@@ -128,6 +132,7 @@
 
 			.c-footer__contact__item-title {
 				display: block;
+			    color: $green--pastel;
 				@include rempx(margin, -5px 0 0);
 			}
 
@@ -135,12 +140,17 @@
 		.o-nav--contact-social {
 			@include rempx(margin-left, -10px);
 
+
 			.o-nav__link {
 				color: #FFF;
 			    text-decoration-color: rgba(white, 0.4);
 				@include rempx(padding, 10px);
 
-				&:hover, &:active, &:focus, &:focus-within { color: $grey--dark; }
+
+				&:hover, &:active, &:focus, &:focus-within {
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
+				}
 			}
 		}
 
@@ -158,6 +168,7 @@
 
 		.o-nav__title {
 		    font-weight: bold;
+		    color: $green--pastel;
 		    @include rempx(font-size, 18px);
 		    @include rempx(margin, 0 0 10px);
 		}
@@ -172,8 +183,8 @@
 
 
 				&:hover, &:active, &:focus, &:focus-within {
-					color: $grey--dark;
-				    text-decoration-color: rgba($grey--dark, 0.4);
+					color: $grey--darker;
+				    text-decoration-color: rgba($grey--darker, 0.6);
 				}
 
 
@@ -187,6 +198,7 @@
 
 	.c-copyright {
 		line-height: 1.4;
+		color: $green--pastel;
 		@include rempx(font-size, 15px);
 		@include rempx(margin, 30px 0 0);
 	}

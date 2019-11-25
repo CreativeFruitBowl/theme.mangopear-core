@@ -36,39 +36,56 @@ jQuery(function($) {
 	 *
 	 * 		@since 1.0.0
 	 *
-	 * 		[a]	
+	 * 		[a]	When a user clicks the button to reveal the navigation
+	 * 		[b]	Prevent it from closing immediately due to [d]
+	 * 		[c]	Open the main nav container
+	 *
+	 * 		[d]	When you click outside of the navigation
+	 * 		[e]	Fetch main navigation el for ease of use later
+	 * 		[f]	...and not on a child el of the main nav
+	 * 		[g]	If the navigation is open
+	 * 		[h]	Close it.	
 	 */
-
-	var mainNav    = $('.js-head-navigation__menu__wrap');
-	var searchForm = $('.js-head-navigation__search__wrap');
-	var accountNav = $('.js-head-navigation__account__wrap');
-
-
-	$('.js-head-navigation__menu__launcher').on('click', function(){
-		$(searchForm).addClass('is-hidden');
-		$(accountNav).addClass('is-hidden');
-
-		if ($(mainNav).hasClass('is-hidden')) { $(mainNav).removeClass('is-hidden'); }
-		else                                { $(mainNav).addClass('is-hidden');    }
-	});
+	
+	var mainNavEl    = $('.js-head-navigation__menu__wrap');
+	var accountNavEl = $('.js-head-navigation__account__wrap');
+	var searchFormEL = $('.js-head-navigation__search__wrap');
 
 
-	$('.js-head-navigation__search__launcher').on('click', function(){
-		$(mainNav).addClass('is-hidden');
-		$(accountNav).addClass('is-hidden');
-
-		if ($(searchForm).hasClass('is-hidden')) { $(searchForm).removeClass('is-hidden'); }
-		else                                { $(searchForm).addClass('is-hidden');    }
-	});
+	$('.js-head-navigation__menu__launcher').on('click', function(event){								// [a]
+		event.stopPropagation();																		// [b]
+		$(accountNavEl, searchFormEL).addClass('is-hidden');
+		$(mainNavEl).toggleClass('is-hidden');															// [c]
+	});																									// [a]
 
 
-	$('.js-head-navigation__account__launcher').on('click', function(){
-		$(mainNav).addClass('is-hidden');
-		$(searchForm).addClass('is-hidden');
+	$('.js-head-navigation__account__launcher').on('click', function(event){							// [a]
+		event.stopPropagation();																		// [b]
+		$(mainNavEl, searchFormEL).addClass('is-hidden');
+		$(accountNavEl).toggleClass('is-hidden');														// [c]
+	});																									// [a]
 
-		if ($(accountNav).hasClass('is-hidden')) { $(accountNav).removeClass('is-hidden'); }
-		else                                     { $(accountNav).addClass('is-hidden');    }
-	});
+
+	$('.js-head-navigation__search__launcher').on('click', function(event){								// [a]
+		event.stopPropagation();																		// [b]
+		$(mainNavEl, accountNavEl).addClass('is-hidden');
+		$(searchFormEL).toggleClass('is-hidden');														// [c]
+	});																									// [a]
+
+
+	$('html').on('click', function(event){																// [d]
+		if (! $(mainNavEl).has(event.target).length) {													// [f]
+			if (! $(mainNavEl).hasClass('is-hidden'))    { $(mainNavEl).addClass('is-hidden');    }		// [g]
+		}																								// [f]
+
+		if (! $(accountNavEl).has(event.target).length) {												// [f]
+			if (! $(accountNavEl).hasClass('is-hidden')) { $(accountNavEl).addClass('is-hidden'); }		// [g]
+		}																								// [f]
+
+		if (! $(searchFormEL).has(event.target).length) {												// [f]
+			if (! $(searchFormEL).hasClass('is-hidden')) { $(searchFormEL).addClass('is-hidden'); }		// [g]
+		}																								// [f]
+	});																									// [d]
 
 
 
