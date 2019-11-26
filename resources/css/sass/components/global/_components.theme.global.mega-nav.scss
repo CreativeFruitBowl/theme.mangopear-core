@@ -29,6 +29,7 @@
  * [5]	Mega nav > Section > Header
  * [6]	Mega nav > Menus
  * [7]	Mega nav > Section > Split nav
+ * [8]	Mega nav > Bold navigation items
  */
 
 
@@ -76,10 +77,10 @@
 
 
 		&.is-hidden {
-		    opacity: 0;
-		    visibility: hidden;
-		    pointer-events: none;
-		    @include mangui-transform(translateY(-10px) scale(0.95));
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			@include mangui-transform(translateY(-10px) scale(0.95));
 		}
 	}
 
@@ -102,12 +103,12 @@
 	 */
 	
 	.c-mega-nav__button {
-	    outline: 0;
-	    color: $green;
-	    background: #FFF;
-	    border-radius: 4px;
-	    border: 2px solid #FFF;
-	    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+		outline: 0;
+		color: $green;
+		background: #FFF;
+		border-radius: 4px;
+		border: 2px solid #FFF;
+		box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 
 
 		&:hover, &:active, &:focus, &:focus-within {
@@ -152,8 +153,8 @@
 
 		.c-mega-nav__header__icon {
 			position: absolute;
-			@include rempx(top, 8px);
-			@include rempx(left, -40px);
+			@include rempx(top, 5px);
+			@include rempx(left, -36px);
 		}
 
 
@@ -219,3 +220,50 @@
 				@include rempx(padding, 0 0 3px);
 			}
 	}
+
+
+
+
+
+	/**
+	 * [8]	Mega nav > Bold navigation items
+	 */
+	
+	.c-mega-nav__bold {
+		line-height: 1;
+		position: relative;
+
+
+		.o-nav__link {
+			text-decoration: none;
+			@include rempx(padding, 10px 0);
+
+
+			&:hover, &:active, &:focus {
+				.c-mega-nav__bold__title { text-decoration-color: $lime; }
+			}
+		}
+	}
+
+
+		.c-mega-nav__bold__icon {
+			position: absolute;
+			@include rempx(top, 7px);
+			@include rempx(left, -36px);
+		}
+
+
+		.c-mega-nav__bold__title {
+			display: block;
+			text-decoration: underline;
+			text-decoration-color: transparent;
+			transition: ease-in-out text-decoration-color 350ms;
+			@include rempx(padding, 0 0 2px);
+		}
+
+
+		.c-mega-nav__bold__description {
+			font-style: italic;
+			color: $grey--dark;
+			@include rempx(font-size, 14px);
+		}
