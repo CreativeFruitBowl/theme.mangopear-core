@@ -1,0 +1,221 @@
+/**
+ * [Component] Mega navigation styles
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.0.0
+ * @since       1.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ * [2]	Popup wrapper
+ * [3]	Nav reveal button
+ * [4]	Mega nav > Sections
+ * [5]	Mega nav > Section > Header
+ * [6]	Mega nav > Menus
+ * [7]	Mega nav > Section > Split nav
+ */
+
+
+/**
+ * [1]  Wrapper
+ */
+
+.c-mega-nav {
+	position: relative;
+}
+
+
+
+
+
+	/**
+	 * [2]	Popup wrapper
+	 *
+	 * 		[a] Required for responsive devices otherwise limits to container
+	 */
+	
+	.c-mega-nav__wrap {
+		right: 0;
+		width: 100%;
+		z-index: 99000;
+		text-align: left;
+		position: absolute;
+		width: calc(100vw - 24px);								// [a]
+		@include rempx(top, 62px);
+		@include rempx(max-width, 400px);
+		@include mangui-transform-origin(50% 0%);
+		@include mangui-transition(ease-in-out 300ms all);
+
+
+		&::before {
+			height: 0px;
+			content: '';
+			position: absolute;
+			border-bottom: 8px solid #FFF;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			@include rempx(top, -8px);
+			@include rempx(right, 58px);
+		}
+
+
+		&.is-hidden {
+		    opacity: 0;
+		    visibility: hidden;
+		    pointer-events: none;
+		    @include mangui-transform(translateY(-10px) scale(0.95));
+		}
+	}
+
+
+		.c-mega-nav__overflow {
+			width: 100%;
+			background: #FFF;
+			overflow-y: auto;
+			border-radius: 4px;
+			max-height: calc(100vh - 7.8125rem);
+			box-shadow: 0 25px 20px rgba(0,0,0,0.2);
+		}
+
+
+
+
+
+	/**
+	 * [3]	Nav reveal button
+	 */
+	
+	.c-mega-nav__button {
+	    outline: 0;
+	    color: $green;
+	    background: #FFF;
+	    border-radius: 4px;
+	    border: 2px solid #FFF;
+	    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+
+		&:hover, &:active, &:focus, &:focus-within {
+			background: $nav--off-white;
+			border-color: $nav--off-white;
+		}
+
+
+		.o-button__text {
+			margin-top: 0;
+			text-transform: uppercase;
+			@include rempx(font-size, 14px);
+		}
+	}
+
+
+
+
+
+	/**
+	 * [4]	Mega nav > Sections
+	 */
+	
+	.c-mega-nav__section {
+		@include rempx(padding, 25px 25px 25px 55px);
+
+		&--secondary { background: #f3f3f3; }
+	}
+
+
+
+
+
+	/**
+	 * [5]	Mega nav > Section > Header
+	 */
+	
+	.c-mega-nav__header {
+		position: relative;
+	}
+
+
+		.c-mega-nav__header__icon {
+			position: absolute;
+			@include rempx(top, 8px);
+			@include rempx(left, -40px);
+		}
+
+
+		.c-mega-nav__header__text {
+			text-transform: uppercase;
+		}
+
+
+
+
+
+	/**
+	 * [6]	Mega nav > Menus
+	 */
+	
+	.o-nav--main {
+		.o-nav__list {
+			@include rempx(font-size, 17px);
+			@include rempx(margin, 12px 0 0);
+		}
+
+
+			.o-nav__link {
+				text-decoration-color: transparent;
+				@include rempx(padding, 3px 0);
+
+
+				&:hover, &:active, &:focus {
+					text-decoration-color: currentColor;
+				}
+			}
+	}
+
+
+
+
+
+	/**
+	 * [7]	Mega nav > Section > Split nav
+	 */
+	
+	.c-mega-nav__split {
+		.o-nav__list {
+			vertical-align: top;
+			display: inline-block;
+			@include rempx(font-size, 15px);
+
+
+			@include mangui-breakpoint("min-width: 360px") {
+				width: calc(50% - 1rem);
+				+ .o-nav__list { @include rempx(margin-left, 25px); }
+			}
+		}
+
+
+			.o-nav__link {
+				@include rempx(padding, 2px 0);
+			}
+
+
+			.o-nav__text {
+				font-weight: bold;
+				@include rempx(padding, 0 0 3px);
+			}
+	}
