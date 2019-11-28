@@ -23,6 +23,7 @@
  * CONTENTS
  *
  * [1]  Wrapper
+ * [2]	Popup wrapper
  */
 
 
@@ -31,5 +32,51 @@
  */
 
 .c-mega-nav {
-
+	position: relative;
 }
+
+
+
+
+
+	/**
+	 * [2]	Popup wrapper
+	 */
+	
+	.c-mega-nav__wrap {
+		right: 0;
+		z-index: 99000;
+		text-align: left;
+		position: absolute;
+		@include rempx(top, 62px);
+		@include mangui-transform-origin(50% 0%);
+		@include mangui-transition(ease-in-out 300ms all);
+
+
+		&::before {
+			height: 0px;
+			content: '';
+			position: absolute;
+			border-bottom: 8px solid #FFF;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			@include rempx(top, -8px);
+			@include rempx(right, 58px);
+		}
+
+
+		&.is-hidden {
+		    opacity: 0;
+		    visibility: hidden;
+		    pointer-events: none;
+		    @include mangui-transform(translateY(-10px) scale(0.95));
+		}
+	}
+
+
+		.c-mega-nav__overflow {
+			background: #FFF;
+			overflow-y: auto;
+			border-radius: 4px;
+			max-height: calc(100vh - 7.8125rem);
+			box-shadow: 0 15px 20px rgba(0,0,0,0.1);
