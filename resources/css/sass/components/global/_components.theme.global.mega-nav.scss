@@ -40,6 +40,7 @@
 .c-mega-nav {
 	position: relative;
 	display: inline-block;
+	@include rempx(margin-left, 12px);
 }
 
 
