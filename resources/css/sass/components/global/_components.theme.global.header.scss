@@ -111,7 +111,12 @@
 		@include mangui-transition(ease-in-out 400ms all);
 
 
-		&.is-hidden { @include rempx(top, -175px); }
+		&.is-hidden {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			@include rempx(top, -175px);
+		}
 
 
 		.o-form__label { display: none; }
