@@ -215,3 +215,30 @@
 		@include rempx(margin, -52px 0 42px);
 		@include rempx(padding, 0 12px 42px);
 	}
+
+
+
+
+
+	/**
+	 * [6]	A11y skip links
+	 */
+	
+	.c-skip-link {
+	    left: 50%;
+	    width: 50%;
+	    z-index: 999999;
+	    position: fixed;
+	    background: #FFF;
+	    border: 2px solid;
+	    margin-left: -25%;
+	    font-weight: bold;
+	    text-align: center;
+	    box-shadow: 0 2px 7px rgba(255,255,255,.1);
+		@include rempx(top, -100px);
+		@include rempx(padding, 5px 0);
+		@include rempx(border-radius, 4px);
+
+
+		&:focus, &:active { @include rempx(top, 8px); }
+	}

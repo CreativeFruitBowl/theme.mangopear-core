@@ -51,6 +51,9 @@
 
 
 	<body <?php body_class(); ?>>
+		<a href="#main" class="c-skip-link">Skip to content</a>
+
+
 		<header class="c-head-navigation">
 			<div class="o-container">
 				<div class="o-grid  o-grid--middle">
