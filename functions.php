@@ -52,7 +52,7 @@ require_once get_template_directory() . '/includes/class.mangui.php';
  * 		@since 1.0.0
  */
 
-define(MANGOPEAR_SPRITE, get_site_url() . '/sprites/mangopear-core.svg');
+define('MANGOPEAR_SPRITE', get_site_url() . '/sprites/mangopear-core.svg');
 
 
 
@@ -66,7 +66,7 @@ define(MANGOPEAR_SPRITE, get_site_url() . '/sprites/mangopear-core.svg');
  * 		@since 1.0.0
  */
 
-define(BROWSER_TAB_COLOUR, '#499E00');
+define('BROWSER_TAB_COLOUR', '#499E00');
 
 
 

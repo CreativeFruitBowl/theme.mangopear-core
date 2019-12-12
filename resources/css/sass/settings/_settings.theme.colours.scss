@@ -24,6 +24,8 @@
  *
  * [1]	Mangopear brand colours
  * [2]	Shades of grey
+ * [3]	Link colours
+ * [4]	Other colours
  */
 
 
@@ -67,3 +69,13 @@ $grey--darker:  #393939;
 
 $colour--links:       $green;
 $colour--links-hover: $lime;
+
+
+
+
+
+/**
+ * [4]	Other colours
+ */
+
+$nav--off-white: #bcd971;

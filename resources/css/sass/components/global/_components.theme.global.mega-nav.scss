@@ -39,6 +39,8 @@
 
 .c-mega-nav {
 	position: relative;
+	display: inline-block;
+	@include rempx(margin-left, 8px);
 }
 
 
@@ -121,6 +123,27 @@
 			margin-top: 0;
 			text-transform: uppercase;
 			@include rempx(font-size, 14px);
+		}
+
+
+		@include mangui-breakpoint("max-width: 430px") {
+			@include rempx(padding, 10px 17px);
+		}
+
+
+		@include mangui-breakpoint("max-width: 390px") {
+			@include rempx(padding, 9px 12px);
+		}
+
+
+		@include mangui-breakpoint("max-width: 360px") {
+			@include rempx(padding, 10px 16px 10px 23px);
+
+
+			.o-button__text {
+				opacity: 0;
+				position: absolute;
+			}
 		}
 	}
 
