@@ -154,3 +154,21 @@
 		margin-bottom: 0;
 	}
 }
+
+
+
+
+
+/**
+ * [6]	Gutenberg blocks: YouTube embed
+ */
+
+.wp-block-embed {
+    margin: 0 0 2rem;
+
+
+	&-youtube iframe {
+	    width: 100%;
+	    @include rempx(height, 300px);
+	}
+}
