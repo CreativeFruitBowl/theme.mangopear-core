@@ -57,8 +57,17 @@
 		@include rempx(max-width, 1000px);
 		@include rempx(margin, 58px auto 80px);
 
-		@include mangui-breakpoint(lap)  { @include rempx(font-size, 38px); }
-		@include mangui-breakpoint(palm) { @include rempx(font-size, 32px); }
+
+		@include mangui-breakpoint(lap)  {
+			@include rempx(font-size, 38px);
+			@include rempx(margin, 30px auto 32px);
+		}
+
+
+		@include mangui-breakpoint(palm) {
+			@include rempx(font-size, 32px);
+			@include rempx(margin, 24px auto);
+		}
 	}
 
 
