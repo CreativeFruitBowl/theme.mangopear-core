@@ -64,6 +64,16 @@
 		    background: #FCFCFC;
 		    @include rempx(margin, -56px 0 -11px);
 		    @include rempx(padding, 24px 16px 6px);
+
+
+		    &.h3 {
+		    	@include rempx(font-size, 33px);
+
+		    	@include mangui-breakpoint("max-width: 850px") {
+		    		line-height: 1.2;
+		    		@include rempx(font-size, 28px);
+		    	}
+		    }
 		}
 
 
