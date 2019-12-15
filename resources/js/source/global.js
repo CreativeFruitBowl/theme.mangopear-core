@@ -81,10 +81,6 @@ jQuery(function($) {
 		if (! $(accountNavEl).has(event.target).length) {												// [f]
 			if (! $(accountNavEl).hasClass('is-hidden')) { $(accountNavEl).addClass('is-hidden'); }		// [g]
 		}																								// [f]
-
-		if (! $(searchFormEL).has(event.target).length) {												// [f]
-			if (! $(searchFormEL).hasClass('is-hidden')) { $(searchFormEL).addClass('is-hidden'); }		// [g]
-		}																								// [f]
 	});																									// [d]
 
 
