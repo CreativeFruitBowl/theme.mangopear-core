@@ -53,8 +53,12 @@
 
 	.c-title__title {
 		text-align: center;
-		@include rempx(margin, 58px auto 80px);
+		@include rempx(font-size, 45px);
 		@include rempx(max-width, 1000px);
+		@include rempx(margin, 58px auto 80px);
+
+		@include mangui-breakpoint(lap)  { @include rempx(font-size, 38px); }
+		@include mangui-breakpoint(palm) { @include rempx(font-size, 32px); }
 	}
 
 
@@ -62,6 +66,12 @@
 			color: $green;
 			display: block;
 			text-transform: uppercase;
+		}
+
+
+		.c-title__sub-title,
+		.c-title__breadcrumb {
+			@include mangui-breakpoint(palm) { @include rempx(font-size, 14px); }
 		}
 
 
