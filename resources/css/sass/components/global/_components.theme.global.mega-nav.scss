@@ -126,17 +126,17 @@
 		}
 
 
-		@include mangui-breakpoint("max-width: 430px") {
+		@include mangui-breakpoint("max-width: 450px") {
 			@include rempx(padding, 10px 17px);
 		}
 
 
-		@include mangui-breakpoint("max-width: 390px") {
+		@include mangui-breakpoint("max-width: 410px") {
 			@include rempx(padding, 9px 12px);
 		}
 
 
-		@include mangui-breakpoint("max-width: 360px") {
+		@include mangui-breakpoint("max-width: 380px") {
 			@include rempx(padding, 10px 16px 10px 23px);
 
 
