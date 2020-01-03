@@ -37,6 +37,7 @@
  * 		[c]	Assign default font sizes and leading to ensure rem and 
  * 			em measurements work as expected, it's all about setting the
  * 			root font size
+ * 	  	[d]	Activate smooth scrolling instead of JS
  */
 
 html {
@@ -44,6 +45,7 @@ html {
 	min-height: 100%;												// [b]
     font-size: ($mangui-base-font-size--unitless / 16) * 1em;		// [c]
     line-height: 1.5;												// [c]
+    scroll-behavior: smooth;										// [d]
 }
 
 
