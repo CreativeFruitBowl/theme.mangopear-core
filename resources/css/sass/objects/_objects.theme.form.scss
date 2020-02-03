@@ -148,3 +148,15 @@
 		    	font-weight: bold;
 		    }
 		}
+
+
+
+
+
+		/**
+		 * [7]	Formidable hide class
+		 */
+		
+		.frm_screen_reader {
+			@extend .u-hide;
+		}
