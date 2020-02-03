@@ -62,18 +62,29 @@
 		    width: 85%;
 		    position: relative;
 		    background: #FCFCFC;
-		    @include rempx(margin, -56px 0 -11px);
-		    @include rempx(padding, 24px 16px 6px);
+		    @include rempx(margin, -50px 0 -11px);
+		    @include rempx(padding, 18px 16px 6px);
 
 
-		    &.h3 {
-		    	@include rempx(font-size, 33px);
-
-		    	@include mangui-breakpoint("max-width: 850px") {
-		    		line-height: 1.2;
-		    		@include rempx(font-size, 28px);
-		    	}
+		    &.h4 {
+		    	@include rempx(font-size, 27px);
+			    @include rempx(margin, -47px 0 -11px);
+			    @include rempx(padding, 15px 16px 6px);
 		    }
+
+
+	    	@include mangui-breakpoint("max-width: 850px") {
+    			@include rempx(font-size, 24px);
+	    		@include rempx(padding-top, 16px);
+	    		@include rempx(margin, -44px 0 -11px);
+
+
+	    		&.h4 {
+	    			@include rempx(font-size, 28px);
+		    		@include rempx(padding-top, 18px);
+		    		@include rempx(margin, -14px 0 -11px);
+	    		}
+	    	}
 		}
 
 
@@ -95,6 +106,8 @@
 	
 	.c-article__content {
 		@include rempx(padding, 0 16px);
+
+		p { @include rempx(font-size, 16px); }
 	}
 
 
