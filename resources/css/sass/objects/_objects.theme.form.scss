@@ -160,3 +160,8 @@
 		.frm_screen_reader {
 			@extend .u-hide;
 		}
+
+
+		.frm_none_container .frm_primary_label {
+			display: none;
+		}
