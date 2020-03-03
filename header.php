@@ -43,6 +43,9 @@
 		<?php echo get_template_part('template-partials/favicons'); ?>
 
 
+		<script src="//rum-static.pingdom.net/pa-5e5cf6df229e930008000592.js" async></script>
+
+
 		<?php wp_head(); ?>
 	</head>
 
