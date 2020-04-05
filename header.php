@@ -67,8 +67,8 @@
 
 					<div class="o-grid__item  u-one-half  u-portable--two-thirds  u-palm--three-quarters">
 						<div class="c-head__buttons">
-							<?php get_template_part('template-partials/global/header/search'); ?>
 							<?php get_template_part('template-partials/global/header/main-menu'); ?>
+							<?php get_template_part('template-partials/global/header/search'); ?>
 						</div><!-- /.c-head__buttons -->
 					</div><!-- /.o-grid__item -->
 				</div><!-- /.o-grid -->
