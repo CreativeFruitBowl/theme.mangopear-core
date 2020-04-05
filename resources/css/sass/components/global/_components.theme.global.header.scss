@@ -94,6 +94,31 @@
 	
 	.c-head__search {
 		display: inline-block;
+
+
+		.c-mega-nav__button {
+		    border: 0;
+		    color: #fff;
+		    background: none;
+		    box-shadow: none;
+		    outline: 2px solid transparent;
+		    @include rempx(margin, 0 -15px 0 16px);
+		    @include rempx(padding, 10px 6px 10px 11px);
+
+
+		    @include mangui-breakpoint("max-width: 1300px") { @include rempx(margin, 0 0 0 16px); }
+
+
+		    &:hover, &:active, &:focus {
+		    	background: none;
+		    	color: $grey--dark;
+		    }
+
+
+		    &:active, &:focus {
+		    	outline-color: $yellow;
+		    }
+		}
 	}
 
 	

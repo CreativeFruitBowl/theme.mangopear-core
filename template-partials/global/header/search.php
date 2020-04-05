@@ -17,7 +17,7 @@
 	<div class="c-head__search">
 		<button class="o-button  o-button--secondary  c-mega-nav__button  js-head-navigation__search__launcher" type="button">
 			<svg class="o-button__icon  o-button__icon--left" height="22" width="22" role="presentation"><use xlink:href="<?php echo MANGOPEAR_SPRITE; ?>#search"/></svg>
-			<span class="o-button__text">Search</span>
+			<span class="o-button__text  u-hide">Search</span>
 		</button>
 
 
