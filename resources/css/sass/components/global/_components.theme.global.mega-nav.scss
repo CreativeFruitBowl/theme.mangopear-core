@@ -54,13 +54,13 @@
 	 */
 	
 	.c-mega-nav__wrap {
-		right: 0;
 		width: 100%;
 		z-index: 99000;
 		text-align: left;
 		position: absolute;
 		width: calc(100vw - 24px);								// [a]
 		@include rempx(top, 62px);
+		@include rempx(right, -61px);
 		@include rempx(max-width, 400px);
 		@include mangui-transform-origin(50% 0%);
 		@include mangui-transition(ease-in-out 300ms all);
@@ -74,7 +74,7 @@
 			border-left: 8px solid transparent;
 			border-right: 8px solid transparent;
 			@include rempx(top, -8px);
-			@include rempx(right, 58px);
+			@include rempx(right, 104px);
 		}
 
 
