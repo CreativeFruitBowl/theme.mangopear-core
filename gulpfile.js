@@ -1,15 +1,12 @@
 /**
- * Register custom post type for Hildon website: Frequently asked questions (for the general website) [faqs]
+ * Compile & compress our CSS and JS
  *
- * This post type holds the FAQs for general website use, they appear on the help page.
- *
- * @category 	Compilation
- * @package  	hildon
- * @author  	Andi North <andi@mangopear.co.uk>
- * @copyright  	2015 Mangopear creative
- * @license   	GNU General Public License <http://opensource.org/licenses/gpl-license.php>
- * @version  	1.10.0
- * @since   	1.0.0
+ * @package   mangopear-framework
+ * @author    Andi North <andi@mangopear.co.uk>
+ * @copyright 2020 Mangopear creative
+ * @license   GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ * @version   1.6.0
+ * @since     1.0.0
  */
 
 
@@ -17,106 +14,208 @@
  * Contents
  *
  * [1]	Load plugins
- * [2]	Styles
- * [3]	Plugins
- * [4]	Scripts
- * [5]	Images
- * [6]	Watch
- * [7]	Task
+ * [2]	Set up variables
+ * [3]	Compile our SASS
+ * [4]	Watch SASS files and process on change
+ * [5]	Run our Gulp tasks
  */
 
 
-	/**
- 	 * [1]	Load plugins
- 	 */
- 	
- 	const sass = require('gulp-ruby-sass');
-	 
-	var gulp = require('gulp'),
-	    notify = require("gulp-notify"),
-	 	plugins = require('gulp-load-plugins')({ camelize: true }),
-		lr = require('tiny-lr'),
-		server = lr();
+/**
+ * [1]	Load plugins
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Load Gulp as various named vars
+ * 		[b]	Allow Gulp to create notifications to inform when files are updated
+ * 		[c]	Post processing CSS
+ * 		[d]	Auto-prefix CSS3 values
+ * 		[e]	Minify our CSS
+ * 		[f]	Create source maps for easier editing
+ * 		[g]	Load gulp-sass to power the entire process
+ */
+
+const { series, parallel, src, dest, watch } = require('gulp');		// [a]
+
+var notify       = require('gulp-notify'),							// [b]
+	postcss      = require('gulp-postcss'),							// [c]
+	autoprefixer = require("autoprefixer"),							// [d]
+	cssnano      = require("cssnano"),								// [e]
+	sourcemaps   = require("gulp-sourcemaps"),						// [f]
+	sass         = require('gulp-sass'),							// [g]
+	uglify       = require('gulp-uglify'),
+	concat       = require('gulp-concat'),
+	rename       = require('gulp-rename');
 
 
-	/**
-	 * [2]	Styles
-	 */
-	
-	gulp.task('styles', function() {
-		return sass('resources/css/sass/*.scss', {
-			style: 'compressed'
-		})
-			.on('error', sass.logError)
-			.pipe(plugins.autoprefixer('last 2 versions', 'ie 10', 'ios 6', 'android 4'))
-			.pipe(gulp.dest('resources/css/compiled'))
-			.pipe(plugins.notify({ title: 'MangUI', message: 'Your SASS and CSS has been processed.' }));
-	});
 
 
-	/**
-	 * [3]	Plugins
-	 */
-	
-	gulp.task('plugins', function() {
-		return gulp.src(['resources/js/source/plugins.js', 'resources/js/vendor/*.js'])
-			.pipe(plugins.concat('plugins.js'))
-			.pipe(gulp.dest('resources/js/compiled'))
-			.pipe(plugins.rename({ suffix: '.min' }))
-			.pipe(plugins.uglify())
-			.pipe(gulp.dest('resources/js/compiled'))
-			.pipe(plugins.notify({ title: 'MangUI', message: 'Your JavaScript plugins have been processed.' }));
-	});
+
+/**
+ * [2]	Set up variables
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Store paths from our plugin/theme
+ * 		[b]	SASS & CSS paths
+ */
+
+var paths = {														// [a]
+	styles: {														// [b]
+		src:  'resources/css/sass/**/*.scss',							// [b]
+		dest: 'resources/css/compiled'									// [b]
+	},																// [b]
+	vendorJS: {														// [c]
+		src:  'resources/js/vendor/**/*.js',							// [c]
+		dest: 'resources/js/compiled'									// [c]
+	},																// [c]
+	customJS: {														// [d]
+		src:  'resources/js/source/**/*.js',							// [d]
+		dest: 'resources/js/compiled'									// [d]
+	}																// [d]
+};																	// [a]
 
 
-	/**
-	 * [4]	Scripts
-	 */
-	
-	gulp.task('scripts', function() {
-		return gulp.src(['resources/js/source/*.js', '!resources/js/source/plugins.js'])
-			.pipe(plugins.jshint('.jshintrc'))
-			.pipe(plugins.jshint.reporter('default'))
-			.pipe(plugins.concat('global.js'))
-			.pipe(gulp.dest('resources/js/compiled'))
-			.pipe(plugins.rename({ suffix: '.min' }))
-			.pipe(plugins.uglify())
-			.pipe(gulp.dest('resources/js/compiled'))
-			.pipe(plugins.notify({ title: 'MangUI', message: 'Your JavaScript scripts have been processed.' }));
-		});
 
 
-	/**
-	 * [5]	Images
-	 */
-	
-	gulp.task('images', function() {
-		return gulp.src('resources/images/**/*', '!resources/images/**/*.psd')
-			.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-			.pipe(gulp.dest('resources/images'))
-			.pipe(plugins.notify({ title: 'MangUI', message: 'Your images have been processed.' }));
-	});
+
+/**
+ * [3]	Compile our SASS
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Wrap in function for proper usage
+ * 		[b]	Find SASS files and loop through
+ * 		[c]	Setup source maps
+ * 		[d]	Run SASS plugin
+ * 		[e]	Log errors, to prevent Gulp from dead failing
+ * 		[f]	Post-process CSS
+ * 		[g]	Push updated CSS files to directory
+ * 		[h]	Notify Gulp for UX
+ */
+
+function sassCompile() {											// [a]
+	return src(paths.styles.src)									// [b]
+		.pipe(sourcemaps.init())									// [c]
+		.pipe(sass())												// [d]
+		.on('error', sass.logError)									// [e]
+		.pipe(postcss([autoprefixer(), cssnano()]))					// [f]
+		.pipe(sourcemaps.write())									// [c]
+		.pipe(dest(paths.styles.dest))								// [g]
+		.pipe(notify('CSS compiled successfully'));					// [h]
+}																	// [a]
 
 
-	/**
-	 * [6]	Watch
-	 *
-	 * 		[a]	Watch on port 35729
-	 * 		[b]	Watch .scss files
-	 * 		[c]	Watch .js files
-	 * 		[d]	Watch image files
-	 */
-	
-	gulp.task('watch', function() {
-		gulp.watch('resources/css/sass/**/*.scss', ['styles']); // [b]
-		gulp.watch('resources/js/vendor/*.js', ['plugins']); // [c]
-		gulp.watch('resources/js/source/*.js', ['scripts']); // [c]
-		gulp.watch('resources/images/**/*', ['images']); // [d]
-	});
 
 
-	/**
-	 * [7]	Task
-	 */
-	
-	gulp.task('default', ['styles', 'plugins', 'scripts', 'watch']);
+
+/**
+ * [x]	Compile our vendor JavaScript
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Wrap in function for proper usage
+ * 		[b]	Find SASS files and loop through
+ * 		[c]	Setup source maps
+ * 		[d]	Run SASS plugin
+ * 		[e]	Log errors, to prevent Gulp from dead failing
+ * 		[f]	Post-process CSS
+ * 		[g]	Push updated CSS files to directory
+ * 		[h]	Notify Gulp for UX
+ */
+
+function vendorJS() {												// [a]
+	return src(paths.vendorJS.src)									// [b]
+		.pipe(concat('plugins.js'))
+		.pipe(dest(paths.vendorJS.dest))							// [g]
+		.pipe(rename({
+			basename: 'plugins',
+			suffix: '.min'
+		}))
+		.pipe(uglify())
+		.pipe(dest(paths.vendorJS.dest))							// [g]
+		.pipe(notify('Vendor JS compiled successfully'));			// [h]
+}																	// [a]
+
+
+
+
+
+/**
+ * [x]	Compile our custom JavaScript
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Wrap in function for proper usage
+ * 		[b]	Find SASS files and loop through
+ * 		[c]	Setup source maps
+ * 		[d]	Run SASS plugin
+ * 		[e]	Log errors, to prevent Gulp from dead failing
+ * 		[f]	Post-process CSS
+ * 		[g]	Push updated CSS files to directory
+ * 		[h]	Notify Gulp for UX
+ */
+
+function customJS() {												// [a]
+	return src(paths.customJS.src)									// [b]
+		.pipe(concat('global.js'))
+		.pipe(dest(paths.customJS.dest))							// [g]
+		.pipe(rename({
+			basename: 'global',
+			suffix: '.min'
+		}))
+		.pipe(uglify())
+		.pipe(dest(paths.customJS.dest))							// [g]
+		.pipe(notify('Custom JS compiled successfully'));			// [h]
+}																	// [a]
+
+
+
+
+
+/**
+ * [4]	Watch SASS files and process on change
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Wrap in function for proper queueing
+ * 		[b]	Use built in watch functions
+ * 		[c]	Find SASS files
+ * 		[d]	Re-use our SASS compilation code
+ */
+
+function watchAssets() {											// [a]
+	watch(															// [b]
+		[paths.styles.src],											// [c]
+		parallel(sassCompile)										// [d]
+	);																// [b]
+
+	watch(															// [b]
+		[paths.vendorJS.src],											// [c]
+		parallel(vendorJS)										// [d]
+	);																// [b]
+
+	watch(															// [b]
+		[paths.customJS.src],											// [c]
+		parallel(customJS)										// [d]
+	);																// [b]
+}																	// [a]
+
+
+
+
+
+/**
+ * [5]	Run our Gulp tasks
+ *
+ * 		@since 1.6.0
+ *
+ * 		[a]	Use "default" to allow us to simply run `gulp`
+ * 		[b]	Compile SASS on load
+ * 		[c]	Watch static assets to ensure they're updated
+ */
+
+exports.default = series(											// [a]
+	parallel(sassCompile, vendorJS, customJS), 											// [b]
+	watchAssets														// [c]
+);																	// [a]
