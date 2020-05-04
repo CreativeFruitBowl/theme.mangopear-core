@@ -176,29 +176,36 @@ jQuery(function($) {
  */
 
 
-jQuery(document).ready(function($){
 
-	/**
-	 * [1] Accordion
-	 *
-	 * 		[a]	On page load, find all accordions
-	 * 		[b]	Find the action button for current accordion
-	 * 		[c]	Set aria-expanded attr to false to close panel and trigger CSS styles
-	 *
-	 * 		[d]	When accordion action clicked
-	 * 		[e]	Fetch current (open|close) state of accordion, save variable 
-	 * 			with value that is the opposite of current state
-	 * 		[f]	Change state of accordion to opposite state
-	 */
+/**
+ * [1] Accordion
+ *
+ * 		[a]	On page load, find all accordions
+ * 		[b]	Find the action button for current accordion
+ * 		[c]	Set aria-expanded attr to false to close panel and trigger CSS styles
+ *
+ * 		[d]	When accordion action clicked
+ * 		[e]	Fetch current (open|close) state of accordion, save variable 
+ * 			with value that is the opposite of current state
+ * 		[f]	Change state of accordion to opposite state
+ */
 
-	$('.js-accordion').each(function(){																// [a]
-		var thisAction  = $(this).find('.js-accordion__action');									// [b]
-		$(thisAction).removeAttr('hidden').attr('aria-expanded', 'false');							// [c]
-	});																								// [a]
+function mfSetupAccordion() {
+	jQuery(function($) {
+		console.log('Function fired');
+		$('.js-accordion').each(function(){																// [a]
+			console.log('El found');
+			var thisAction  = $(this).find('.js-accordion__action');									// [b]
+			$(thisAction).removeAttr('hidden').attr('aria-expanded', 'false');							// [c]
+		});																								// [a]
 
 
-	$('.js-accordion__action').unbind().on('click', function(e){									// [d]
-		var currentState = ($(this).attr('aria-expanded') === 'true') ? 'false' : 'true';			// [e]
-		$(this).attr('aria-expanded', currentState);												// [f]
-	});																								// [d]
-});
+		$('.js-accordion__action').unbind().on('click', function(e){									// [d]
+			var currentState = ($(this).attr('aria-expanded') === 'true') ? 'false' : 'true';			// [e]
+			$(this).attr('aria-expanded', currentState);												// [f]
+		});																								// [d]
+	});
+}
+
+
+mfSetupAccordion();
