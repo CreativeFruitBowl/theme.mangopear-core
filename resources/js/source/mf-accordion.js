@@ -51,9 +51,7 @@
 
 function mfSetupAccordion() {
 	jQuery(function($) {
-		console.log('Function fired');
 		$('.js-accordion').each(function(){																// [a]
-			console.log('El found');
 			var thisAction  = $(this).find('.js-accordion__action');									// [b]
 			$(thisAction).removeAttr('hidden').attr('aria-expanded', 'false');							// [c]
 		});																								// [a]
