@@ -1,0 +1,127 @@
+/**
+ * [Component] Accordion
+ *
+ * @package     scenic-buses
+ * @category    styles
+ * @version     4.0.0
+ * @since       4.0.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 4.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ */
+
+
+/**
+ * [1]  Wrapper
+ *
+ *      @since 4.0.0
+ */
+
+.o-accordion {
+
+}
+
+
+
+
+
+	/**
+	 * [2]	Action button
+	 *
+	 * 		This is the button that will expand the accordion 
+	 * 		panel to reveal the content.
+	 *
+	 * 		@since 4.0.0
+	 *
+	 * 		[a]	Enforcing the button to only show when it has a valid 
+	 * 			aria-expanded attribute (added with js onload).
+	 */
+	
+	.o-accordion__action {
+		display: none;													// [a]
+	}
+
+
+
+
+
+	/**
+	 * [3]	Accordion panel
+	 *
+	 * 		This contains the accordion's content.
+	 *
+	 * 		@since 4.0.0
+	 */
+	
+	.o-accordion__panel {
+
+	}
+
+
+
+
+
+	/**
+	 * [4]	Expand or close panel
+	 */
+	
+	.o-accordion__action {
+		&[aria-expanded] {
+			display: block;
+			display: flex;
+			align-items: center;
+			@include rempx(padding, 11px 24px 12px);
+
+
+			.o-button__icon--right { @include rempx(width, 30px); }
+
+
+			+ .o-accordion__panel {
+				--panel-max-height: 500px;
+
+				max-height: 0;
+				overflow-y: auto;
+				position: relative;
+				overflow-x: hidden;
+				visibility: hidden;
+				-webkit-overflow-scrolling: touch;
+				@include mangui-transition(ease-in-out 400ms all);
+
+
+				.o-accordion__content {
+					opacity: 0;
+					@include mangui-transform(translateY(1rem));
+					@include mangui-transition(ease-in-out 400ms 50ms all);
+				}
+			}
+		}
+
+
+		&[aria-expanded="true"] {
+			+ .o-accordion__panel {
+				visibility: visible;
+				max-height: var(--panel-max-height);
+
+
+				.o-accordion__content {
+					opacity: 1;
+					@include mangui-transform(translateY(0));
+				}
+			}
+		}
+	}
