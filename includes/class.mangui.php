@@ -127,7 +127,7 @@ if (! class_exists('MangUI')) :
 
 
 			add_action('init', array($this, 'init'), 5);									// [ii]
-			add_action('wp_enqueue_scripts', array($this, 'register_assets'), 2);							// [ii]
+			add_action('wp_enqueue_scripts', array($this, 'register_assets'), 20);							// [ii]
 			add_action('init', array($this, 'register_navigations'), 5);					// [iii]
 			add_action('init', array($this, 'register_default_sidebars'), 5);				// [iv]
 			add_filter('widget_text', 'do_shortcode');										// [v]
