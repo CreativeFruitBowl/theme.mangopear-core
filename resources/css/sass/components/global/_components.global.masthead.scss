@@ -1,0 +1,98 @@
+/**
+ * [Component] 	Masthead
+ *
+ * 				The masthead is the all-new mega header for posts, pages and 
+ * 				custom post types.
+ *
+ * @package     mangopear-core
+ * @category    styles
+ * @version     1.7.0
+ * @since       1.7.0
+ * @author      Andi North <andi@mangopear.co.uk>
+ * @link        https://mangopear.co.uk/
+ * @license     GNU General Public License <http://opensource.org/licenses/gpl-license.php>
+ */
+
+
+/**
+ * CHANGELOG
+ *
+ * @version 1.0.0
+ *          Init file
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * [1]  Wrapper
+ * [2]	Logo
+ * [3]	Menu button
+ * [4]	Mega navigation
+ * [5]	Title search
+ */
+
+
+/**
+ * [1]  Wrapper
+ */
+
+.c-masthead {
+	position: relative;
+	@include rempx(padding-left, 12px);
+	@include rempx(padding-right, 12px);
+	@include rempx(margin-bottom, 140px);
+
+
+	&::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		background: $green;
+		transform: skewY(3deg);
+		@include rempx(left, -12px);
+		@include rempx(right, -12px);
+		@include rempx(bottom, -89px);
+		@include rempx(height, 1500px);
+		background: linear-gradient(45deg, $green 15%, $lime 100%);
+	}
+
+
+	.c-masthead__title {
+	    color: #fff;
+		text-align: left;
+		@include rempx(font-size, 52px);
+		@include rempx(margin, 50px 0 0);
+	    text-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+		@include mangui-breakpoint(desk) { @include rempx(max-width, 650px); }
+		@include mangui-breakpoint("max-width: 1100px") { @include rempx(font-size, 48px); }
+		@include mangui-breakpoint("max-width:  900px") { @include rempx(font-size, 43px); }
+		@include mangui-breakpoint("max-width:  790px") { @include rempx(font-size, 39px); }
+		@include mangui-breakpoint("max-width:  500px") { @include rempx(font-size, 32px); }
+		@include mangui-breakpoint("max-width:  370px") { @include rempx(font-size, 28px); }
+	}
+
+
+	.c-masthead__description {
+		color: #fff;
+		margin: 1.75em 0 0;
+		@include rempx(max-width, 730px);
+		@include mangui-breakpoint("max-width: 1100px") { @include rempx(font-size, 23px); }
+		@include mangui-breakpoint("max-width:  600px") { @include rempx(font-size, 20px); }
+		@include mangui-breakpoint("max-width:  450px") { @include rempx(font-size, 18px); }
+	}
+}
+
+
+
+
+
+/**
+ * [2]	Change header navigation background
+ *
+ * 		@since 1.0.0
+ */
+
+body.has-mega-title .c-head-navigation {
+    background: none;
+}
