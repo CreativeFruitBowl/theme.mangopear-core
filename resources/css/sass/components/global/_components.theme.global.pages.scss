@@ -85,6 +85,7 @@
 
 
 	.c-title__image-wrap {
+		overflow: hidden;
 		position: relative;
 		@include rempx(margin, 9px 0 54px);
 
