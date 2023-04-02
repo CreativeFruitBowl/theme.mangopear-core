@@ -1,21 +1,34 @@
 {
-  "name": "MangUI",
-  "version": "2.0.0",
+  "name": "scenic-buses",
+  "version": "3.0.0",
+  "description": "WordPress theme for Scenic Buses",
+  "author": "Andi North <andi@mangopear.co.uk>",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MangopearUK/theme.scenic-buses.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MangopearUK/theme.scenic-buses/issues"
+  },
+  "homepage": "https://github.com/MangopearUK/theme.scenic-buses#readme",
+  "main": "resources/css/compiled/screen.css",
   "dependencies": {
     "@mangopear-framework/core-css": "~0.3.3",
     "@mangopear-framework/sass-toolkit": "~0.4.2"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "cssnano": "^4.1.10",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.17",
+    "sass": "~1.49.7",
     "gulp": "~4.0.2",
     "gulp-concat": "~2.6.1",
-    "gulp-load-plugins": "~2.0.3",
-    "gulp-notify": "^3.2.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-load-plugins": "~2.0.7",
+    "gulp-notify": "^4.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "~3.0.2",
-    "gulp-rename": "~1.2.2"
+    "gulp-rename": "~2.0.0"
   }
 }

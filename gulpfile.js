@@ -36,13 +36,13 @@
  */
 
 const { series, parallel, src, dest, watch } = require('gulp');		// [a]
+const sass = require('gulp-sass')(require('sass'));
 
 var notify       = require('gulp-notify'),							// [b]
 	postcss      = require('gulp-postcss'),							// [c]
 	autoprefixer = require("autoprefixer"),							// [d]
 	cssnano      = require("cssnano"),								// [e]
 	sourcemaps   = require("gulp-sourcemaps"),						// [f]
-	sass         = require('gulp-sass'),							// [g]
 	uglify       = require('gulp-uglify'),
 	concat       = require('gulp-concat'),
 	rename       = require('gulp-rename');
