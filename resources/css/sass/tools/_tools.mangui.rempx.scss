@@ -51,7 +51,7 @@ $rem-base-font-size: $mangui-base-font-size--unitless !default;
  */
 
 @function parseInt ($n) {
-	@return $n / ($n * 0 + 1);
+	@return math.div($n, ($n * 0 + 1));
 }
 
 
@@ -73,36 +73,36 @@ $rem-base-font-size: $mangui-base-font-size--unitless !default;
  */
 
 @mixin rempx ($property, $values) {
-	$px:  (); 																	// [a]
-	$rem: (); 																	// [a]
+    $px:    ();                                                                         // [2]
+    $rem:   ();                                                                         // [2]
 
 
-	@each $value in $values {													// [b]
-		@if $value == 0 or $value == auto {										// [c]
-			$px:	append($px,  $value);										// [c]
-			$rem:	append($rem, $value);										// [c]
-		}
+    @each $value in $values {                                                           // [3]
+        @if $value == 0 or $value == auto {                                             // [4]
+            $px:    append($px,  $value);
+            $rem:   append($rem, $value);
+        }
 
 
-		@else {
-			$unit: unit($value);												// [d]
-			$val: parseInt($value);												// [d]
+        @else {
+            $unit: unit($value);                                                        // [5]
+            $val: parseInt($value);                                                     // [5]
 
 
-			@if $unit == "px" {													// [e]
-				$px:	append($px, $value);									// [e]
-				$rem:	append($rem, ($val / $rem-base-font-size * 1rem));		// [e]
-			}
+            @if $unit == "px" {                                                         // [6]
+                $px:    append($px, $value);
+                $rem:   append($rem, (math.div($val, $rem-base-font-size) * 1rem));
+            }
 
 
-			@if $unit == "rem" {												// [e]
-				$px:	append($px, ($val * $rem-base-font-size * 1px));		// [e]
-				$rem:	append($rem, $value);									// [e]
-			}
-		}
-	}
+            @if $unit == "rem" {                                                        // [6]
+                $px:    append($px, ($val * $rem-base-font-size * 1px));
+                $rem:   append($rem, $value);
+            }
+        }
+    }
 
 
-	#{$property}: $px; 															// [f]
-	#{$property}: $rem; 														// [f]
+    #{$property}: $px; // [7]
+    #{$property}: $rem; // [7]
 }

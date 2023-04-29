@@ -41,14 +41,14 @@
  */
 
 html {
-    padding: 0;														// [a]
-	min-height: 100%;												// [b]
-    font-size: ($mangui-base-font-size--unitless / 16) * 1em;		// [c]
-    line-height: 1.5;												// [c]
-    scroll-behavior: smooth;										// [d]
+    padding: 0;														     // [a]
+	min-height: 100%;												     // [b]
+    font-size: math.div($mangui-base-font-size--unitless, 16) * 1em;	 // [c]
+    line-height: 1.5;												     // [c]
+    scroll-behavior: smooth;										     // [d]
 }
 
 
 	body {
-		min-height: 100%;											// [b]
+		min-height: 100%;											     // [b]
 	}

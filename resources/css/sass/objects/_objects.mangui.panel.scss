@@ -102,7 +102,7 @@
  */
 
 .o-panel--narrow {
-	@include rempx(padding, $mangui-vertical-rhythm $mangui-vertical-rhythm/2);
+	@include rempx(padding, $mangui-vertical-rhythm math.div($mangui-vertical-rhythm, 2));
 }
 
 

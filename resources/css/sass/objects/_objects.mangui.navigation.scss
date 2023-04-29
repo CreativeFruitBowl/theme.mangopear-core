@@ -106,7 +106,7 @@
 	opacity: 0;																			// [d]
 	position: absolute; 																// [a]
 	@include rempx(left, -2000px); 														// [b]
-	@include rempx(padding, ($mangui-vertical-rhythm/3)*2 0); 							// [c]
+	@include rempx(padding, math.div($mangui-vertical-rhythm, 3)*2 0); 							// [c]
 	@include mangui-transition(ease-in-out 350ms opacity, ease-in-out 1ms 350ms left); 	// [d]
 
 
